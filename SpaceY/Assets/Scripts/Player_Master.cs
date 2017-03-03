@@ -4,23 +4,11 @@ using UnityEngine;
 
 public class Player_Master : MonoBehaviour {
 	
-	void OnEnable() {
-		
-	}
-	
-	void OnDisable() {
-		
-	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
-	
-	private void InitializeReferences() {
-		
+	public delegate void GeneralEventHandler();
+	public event GeneralEventHandler EventInput;
+
+	public void CallEventInput() {
+		if (EventInput != null)
+			EventInput ();
 	}
 }
