@@ -55,10 +55,11 @@ GameObject:
   - component: {fileID: 23311606143846866}
   - component: {fileID: 95038849575360756}
   - component: {fileID: 54533371479045702}
+  - component: {fileID: 136531340667360018}
   - component: {fileID: 114906451769945358}
   - component: {fileID: 114406858009208126}
   - component: {fileID: 114718287023474526}
-  - component: {fileID: 136531340667360018}
+  - component: {fileID: 114500233424133288}
   m_Layer: 0
   m_Name: Low_Poly_Spacecraft
   m_TagString: Player
@@ -310,6 +311,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0840814a60618142bf2283d77c2f41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114500233424133288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338712982621154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0094cefe4fa74d64eb7d0893579ea328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114718287023474526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -321,6 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685f5da6dc5d35746bd12dd8fa3d0098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 3
+  isInvulnerable: 0
 --- !u!114 &114906451769945358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -343,10 +357,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.65
-  m_Height: 2
+  m_Radius: 0.6
+  m_Height: 1.65
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.3}
+  m_Center: {x: 0, y: 0, z: 0.35}
 --- !u!198 &198621337105073410
 ParticleSystem:
   m_ObjectHideFlags: 1
