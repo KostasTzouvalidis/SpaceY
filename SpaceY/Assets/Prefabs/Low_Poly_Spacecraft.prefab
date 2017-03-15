@@ -281,7 +281,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 12
+  m_Constraints: 60
   m_CollisionDetection: 0
 --- !u!95 &95038849575360756
 Animator:
@@ -348,6 +348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVelocity: 12
   tiltByMovement: 1.5
+  xMin: -9
+  xMax: 9
 --- !u!136 &136531340667360018
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -355,12 +357,12 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1338712982621154}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.6
   m_Height: 1.65
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.35}
+  m_Center: {x: 0, y: -0.4, z: 0.35}
 --- !u!198 &198621337105073410
 ParticleSystem:
   m_ObjectHideFlags: 1

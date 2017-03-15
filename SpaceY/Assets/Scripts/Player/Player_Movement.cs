@@ -12,6 +12,8 @@ public class Player_Movement : MonoBehaviour {
 	[SerializeField]
 	private float tiltByMovement = 2;
 
+	public float xMin = -7, xMax = 7;
+
 	void OnEnable() {
 		InitializeReferences ();
 		playerMaster.EventInput += PlayerMove;
@@ -24,6 +26,8 @@ public class Player_Movement : MonoBehaviour {
 	private void FixedUpdate() {
 		if (myRig.velocity.x != 0)
 			myRig.rotation = Quaternion.Euler(0.0f, 0.0f, myRig.velocity.x * -tiltByMovement);
+		else
+			myRig.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
 	}
 
 	private void PlayerMove() {
@@ -31,8 +35,12 @@ public class Player_Movement : MonoBehaviour {
 			myRig.velocity = Vector3.right * movementVelocity;
 		else if (myRig.velocity.x > 0)
 			myRig.velocity = Vector3.left * movementVelocity;
-		else
-			myRig.velocity = Vector3.right * movementVelocity;
+		else {
+			if(myRig.position.x > 0)
+				myRig.velocity = Vector3.left * movementVelocity;
+			else if(myRig.position.x <= 0)
+				myRig.velocity = Vector3.right * movementVelocity;
+		}
 	}
 
 	private void InitializeReferences() {

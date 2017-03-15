@@ -16,7 +16,7 @@ public class Hazard_Destroy : MonoBehaviour {
 		hazardMaster.EventDestroyed -= DestroyMe;
 	}
 
-	void OnTriggerEnter(Collider col) {
+	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.name == "Spacecraft")
 			hazardMaster.CallEventDestroyed ();
 	}
