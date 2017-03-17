@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_TakeDamage : MonoBehaviour {
 
 	private Player_Master playerMaster;
+	public float invulnerabilityDuration = 2;
 
 	void OnEnable() {
 		InitializeReferences ();
@@ -25,11 +26,13 @@ public class Player_TakeDamage : MonoBehaviour {
 
 	private void MakeMeInvulnerable() {
 		playerMaster.isInvulnerable = true;
+		playerMaster.gameObject.layer = 9;
 		StartCoroutine (ResetInvulnerability());
 	}
 
 	private IEnumerator ResetInvulnerability() {
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (invulnerabilityDuration);
+		playerMaster.gameObject.layer = 8;
 		playerMaster.isInvulnerable = false;
 	}
 	

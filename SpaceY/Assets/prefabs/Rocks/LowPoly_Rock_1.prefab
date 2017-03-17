@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114021623309477034}
   - component: {fileID: 114566747951625626}
   - component: {fileID: 114728612763264770}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LowPoly_Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993078863417276}
   serializedVersion: 2
-  m_Mass: 5
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 0

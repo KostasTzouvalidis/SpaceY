@@ -22,5 +22,7 @@ public class GameManager_References : MonoBehaviour {
 			return;
 		}
 		_playerGO = GameObject.Find (playerName);
+		if (_playerGO == null)
+			Debug.Log ("!");
 	}
 }

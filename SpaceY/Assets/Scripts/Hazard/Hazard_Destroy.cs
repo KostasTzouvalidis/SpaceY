@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hazard_Destroy : MonoBehaviour {
 
 	private Hazard_Master hazardMaster;
+	private Player_Master playerMaster;
 	public GameObject destroyParticleEffect;
 
 	void OnEnable() {
@@ -17,8 +18,10 @@ public class Hazard_Destroy : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.name == "Spacecraft")
+		if (col.gameObject.name == "Spacecraft") {
 			hazardMaster.CallEventDestroyed ();
+			playerMaster.CallEventTakeDamage ();
+		}
 	}
 
 	private void DestroyMe() {
@@ -28,5 +31,6 @@ public class Hazard_Destroy : MonoBehaviour {
 	
 	private void InitializeReferences() {
 		hazardMaster = GetComponent<Hazard_Master> ();
+		playerMaster = GameObject.Find ("Spacecraft").GetComponent<Player_Master> ();
 	}
 }
