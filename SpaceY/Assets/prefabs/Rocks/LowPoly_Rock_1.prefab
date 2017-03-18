@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d26e4cf1e31a041b722c524e70f9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 2
-  maxSpeed: 6
+  minSpeed: 5
+  maxSpeed: 8
 --- !u!114 &114566747951625626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6209a76eaa0804190c45769589fa66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 8
-  maxSpeed: 11
+  minSpeed: 10
+  maxSpeed: 13
 --- !u!114 &114728612763264770
 MonoBehaviour:
   m_ObjectHideFlags: 1
