@@ -14,14 +14,6 @@ public class Camera_Animations : MonoBehaviour {
 	void OnDisable() {
 		playerMaster.EventTakeDamage -= PlayShakingAnimation;
 	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
 
 	private void PlayShakingAnimation() {
 		GetComponent<Animation> ().Play ();

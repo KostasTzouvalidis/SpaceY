@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 4302391828780788}
   - component: {fileID: 198216029326159732}
   - component: {fileID: 199670838594106148}
+  - component: {fileID: 54919427326309120}
+  - component: {fileID: 114915895479254192}
   m_Layer: 0
   m_Name: Shield_Help
   m_TagString: Untagged
@@ -68,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1969835752362624}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.52, y: -0, z: 23.12}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4228127084181836}
@@ -128,6 +130,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &54919427326309120
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969835752362624}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65095828853373198
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -153,6 +170,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 5
+--- !u!114 &114915895479254192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969835752362624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f868e0e55c68ad645913dd31481f5975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
 --- !u!198 &198216029326159732
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -208,7 +237,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 743089631
+  randomSeed: 921719849
   InitialModule:
     serializedVersion: 3
     enabled: 1
