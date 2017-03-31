@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 199628651514858950}
   - component: {fileID: 54388124400873868}
   - component: {fileID: 114968355820934246}
+  - component: {fileID: 114518499781946302}
   m_Layer: 0
   m_Name: Health_Help
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1995292087530070}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.31, y: 0, z: 32.24}
+  m_LocalPosition: {x: 6.76, y: 0, z: 32.24}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4609679930632970}
@@ -170,6 +171,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 5
+--- !u!114 &114518499781946302
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1995292087530070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a88c780a6143142b57e66e69b337ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZToDestroy: -15
 --- !u!114 &114968355820934246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +250,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 882330763
+  randomSeed: 387706370
   InitialModule:
     serializedVersion: 3
     enabled: 1

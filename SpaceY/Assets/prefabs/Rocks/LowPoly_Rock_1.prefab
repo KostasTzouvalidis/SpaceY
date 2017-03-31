@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114021623309477034}
   - component: {fileID: 114566747951625626}
   - component: {fileID: 114728612763264770}
+  - component: {fileID: 114144518520494642}
   m_Layer: 10
   m_Name: LowPoly_Rock_1
   m_TagString: Untagged
@@ -42,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993078863417276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.6, y: 0, z: 7}
+  m_LocalPosition: {x: -5, y: 0, z: 18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -145,6 +146,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 8
+--- !u!114 &114144518520494642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993078863417276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a88c780a6143142b57e66e69b337ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZToDestroy: -15
 --- !u!114 &114566747951625626
 MonoBehaviour:
   m_ObjectHideFlags: 1
