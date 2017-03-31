@@ -9532,8 +9532,9 @@ MonoBehaviour:
   - {fileID: 1993078863417276, guid: 886615d58cbedae4bb40815901bd0b3d, type: 2}
   - {fileID: 1344123113176482, guid: fb495bb08c0f06348a9959b66af57d0f, type: 2}
   minRate: 0.4
-  maxRate: 0.75
+  maxRate: 0.7
   fixedZPosition: 14
+  burstRate: 0.2
 --- !u!1 &1991735118
 GameObject:
   m_ObjectHideFlags: 0

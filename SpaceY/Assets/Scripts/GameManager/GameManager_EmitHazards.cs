@@ -14,14 +14,6 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	public float fixedZPosition;
 	public float burstRate = 0.2f;
 
-	void OnEnable() {
-		
-	}
-	
-	void OnDisable() {
-		
-	}
-	
 	void Start () {
 		fr = new FixedRandom(-7, 7, 1);
 	}
@@ -29,8 +21,10 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	void FixedUpdate () {
 		if (Time.time > nextEm) {
 			nextEm = Time.time + Random.Range (minRate, maxRate);
-			if (Random.Range (0.0f, 1) < burstRate)
+			if (Random.Range (0.0f, 1) < burstRate) {
 				HazardBurst ();
+				nextEm += nextEm * 0.05f;
+			}
 			else
 				HazardEmission ();
 		}
@@ -44,7 +38,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 
 	private void HazardBurst() {
 		float xPos;
-		for (int i = 0; i < (int)Random.Range (2, 4); i++) {
+		for (int i = 0; i < (int)Random.Range (2, 3); i++) {
 			xPos = fr.GetFloatRange();
 			Instantiate (hazards [Random.Range (0, hazards.Length)], new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
 		}
