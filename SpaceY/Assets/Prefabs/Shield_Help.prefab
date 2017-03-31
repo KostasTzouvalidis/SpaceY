@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 199670838594106148}
   - component: {fileID: 54919427326309120}
   - component: {fileID: 114915895479254192}
+  - component: {fileID: 114997074888375160}
   m_Layer: 0
   m_Name: Shield_Help
   m_TagString: Untagged
@@ -182,6 +183,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+--- !u!114 &114997074888375160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1969835752362624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a88c780a6143142b57e66e69b337ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZToDestroy: -15
 --- !u!198 &198216029326159732
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -237,7 +250,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 921719849
+  randomSeed: -1621574218
   InitialModule:
     serializedVersion: 3
     enabled: 1
