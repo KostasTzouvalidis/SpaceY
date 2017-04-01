@@ -25,8 +25,10 @@ public class Hazard_Destroy : MonoBehaviour {
 	}
 
 	private void DestroyMe() {
-		GameObject par = Instantiate (destroyParticleEffect, this.transform.position, destroyParticleEffect.transform.rotation);
-		GameObject.Destroy (par, 1.5f);
+		if (destroyParticleEffect != null) {
+			GameObject par = Instantiate (destroyParticleEffect, this.transform.position, destroyParticleEffect.transform.rotation);
+			GameObject.Destroy (par, 1.5f);
+		}
 		GameObject.Destroy (this.gameObject);
 	}
 	

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager_Master : MonoBehaviour {
+public class Player_Shoot : MonoBehaviour {
 
-	public static bool shouldEmit = false;
+	private Player_Master playerMaster;
+	public bool canShoot = false;
 
 	void OnEnable() {
 		
@@ -23,6 +24,6 @@ public class GameManager_Master : MonoBehaviour {
 	}
 	
 	private void InitializeReferences() {
-		
+		playerMaster = GetComponent<Player_Master> ();
 	}
 }

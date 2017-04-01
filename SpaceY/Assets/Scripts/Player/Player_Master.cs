@@ -5,9 +5,12 @@ using UnityEngine;
 public class Player_Master : MonoBehaviour {
 	
 	public delegate void GeneralEventHandler();
+	public delegate void OneParameterEventHandler(int val);
 	public event GeneralEventHandler EventInput;
 	public event GeneralEventHandler EventTakeDamage;
 	public event GeneralEventHandler EventDie;
+	public event GeneralEventHandler EventNoAmmo;
+	public event OneParameterEventHandler EventPickUpAmmo;
 
 	public int health = 3;
 	[SerializeField]
@@ -27,4 +30,15 @@ public class Player_Master : MonoBehaviour {
 		if (EventDie != null)
 			EventDie ();
 	}
+		
+	public void CallEventNoAmmo() {
+		if (EventNoAmmo != null)
+			EventNoAmmo ();
+	}
+
+	public void CallEventPickUpAmmo(int value) {
+		if (EventPickUpAmmo != null)
+			EventPickUpAmmo (value);
+	}
+
 }

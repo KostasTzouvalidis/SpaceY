@@ -7,6 +7,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	//private GameManager_Master gmMaster;
 	[SerializeField]
 	private GameObject[] hazards;
+	private GameObject specialHazard;
 	private FixedRandom fr;
 	private float nextEm;
 	public float minRate;
@@ -19,11 +20,11 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		if (Time.time > nextEm) {
+		if (Time.time > nextEm && GameManager_Master.shouldEmit) {
 			nextEm = Time.time + Random.Range (minRate, maxRate);
 			if (Random.Range (0.0f, 1) < burstRate) {
 				HazardBurst ();
-				nextEm += nextEm * 0.05f;
+				nextEm += nextEm * 0.03f;
 			}
 			else
 				HazardEmission ();
@@ -43,7 +44,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 			Instantiate (hazards [Random.Range (0, hazards.Length)], new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
 		}
 	}
-	
+
 	private void InitializeReferences() {
 		//gmMaster = GetComponent<GameManager_Master> ();
 	}

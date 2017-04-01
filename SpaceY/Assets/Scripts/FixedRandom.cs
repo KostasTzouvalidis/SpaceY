@@ -20,9 +20,7 @@ public class FixedRandom {
 		maxFValue = max;
 		for (float i = min; i <= max; i += clamp) {
 			fixedFValues.Add (i);
-			Debug.Log ("Value: " + i);
 		}
-		Debug.Log ("Capacity: " + fixedFValues.Capacity);
 	}
 
 	public FixedRandom(double min, double max, double clamp) {

@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114566747951625626}
   - component: {fileID: 114728612763264770}
   - component: {fileID: 114144518520494642}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: LowPoly_Rock_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 8
+  onlyZAxis: 0
 --- !u!114 &114144518520494642
 MonoBehaviour:
   m_ObjectHideFlags: 1
