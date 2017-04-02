@@ -5,14 +5,17 @@ using UnityEngine;
 public class Player_Ammunition : MonoBehaviour {
 
 	private Player_Master playerMaster;
-	[SerializeField]
-	private int ammo = 0;
+	public int ammo = 0;
 	private float checkRate = 0.5f;
 	private float nextCheck;
-	public int specialHazardLayer;
 
-	void Start() {
+	void OnEnable() {
 		InitializeReferences ();
+		playerMaster.EventPickUpAmmo += PickUpAmmo;
+	}
+
+	void OnDisable() {
+		playerMaster.EventPickUpAmmo -= PickUpAmmo;
 	}
 
 	void FixedUpdate() {
@@ -28,7 +31,8 @@ public class Player_Ammunition : MonoBehaviour {
 	}
 
 	private void CheckForAmmo() {
-		if (ammo == 0) {
+		if (ammo <= 0) {
+			Debug.Log ("!");
 			playerMaster.CallEventNoAmmo ();
 		}
 	}

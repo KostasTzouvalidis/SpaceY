@@ -26,13 +26,13 @@ public class Player_TakeDamage : MonoBehaviour {
 
 	private void MakeMeInvulnerable() {
 		playerMaster.isInvulnerable = true;
-		playerMaster.gameObject.layer = 9;
+		playerMaster.gameObject.layer = 11;
 		StartCoroutine (ResetInvulnerability());
 	}
 
 	private IEnumerator ResetInvulnerability() {
 		yield return new WaitForSeconds (invulnerabilityDuration);
-		playerMaster.gameObject.layer = 8;
+		playerMaster.gameObject.layer = 10;
 		playerMaster.isInvulnerable = false;
 	}
 	

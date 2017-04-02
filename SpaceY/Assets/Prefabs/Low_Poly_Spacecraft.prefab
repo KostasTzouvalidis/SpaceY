@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4903674504842644}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Player_Engine_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4266684103076018}
   - component: {fileID: 198672292264178950}
   - component: {fileID: 199348865084349174}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: part_jet_flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,9 @@ GameObject:
   - component: {fileID: 114500233424133288}
   - component: {fileID: 111634598453293468}
   - component: {fileID: 114908064476199704}
-  m_Layer: 8
+  - component: {fileID: 114662160798091616}
+  - component: {fileID: 114651727161291186}
+  m_Layer: 10
   m_Name: Low_Poly_Spacecraft
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -78,7 +80,7 @@ GameObject:
   - component: {fileID: 4899034395064958}
   - component: {fileID: 198745381823125002}
   - component: {fileID: 199505594535910514}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: part_jet_core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +97,7 @@ GameObject:
   - component: {fileID: 4685213563778564}
   - component: {fileID: 198621337105073410}
   - component: {fileID: 199004547758574564}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: part_jet_core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +114,7 @@ GameObject:
   - component: {fileID: 4034803607193642}
   - component: {fileID: 198920577862163736}
   - component: {fileID: 199935628949839868}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: part_jet_flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +129,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4082657465877088}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Player_Engine_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +323,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0094cefe4fa74d64eb7d0893579ea328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerabilityDuration: 0.7
+  invulnerabilityDuration: 1
+--- !u!114 &114651727161291186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338712982621154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8410b94c1beb5cb4792c3055081a069d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canShoot: 0
+  shootRate: 0.25
+--- !u!114 &114662160798091616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338712982621154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55a760ae31db87419773bc7c59c4608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammo: 0
 --- !u!114 &114718287023474526
 MonoBehaviour:
   m_ObjectHideFlags: 1
