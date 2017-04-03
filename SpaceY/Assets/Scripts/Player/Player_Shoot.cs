@@ -6,23 +6,16 @@ public class Player_Shoot : MonoBehaviour {
 
 	private Player_Master playerMaster;
 	private float nextShoot;
-	public bool canShoot = false;
+	public GameObject laserBolt;
+	public Transform shootingPosition;
 	public float shootRate = 0.25f;
 
-	void OnEnable() {
+	void Start() {
 		InitializeReferences ();
 	}
-	
-	void OnDisable() {
-		playerMaster.EventNoAmmo += StopShooting;
-	}
-	
-	void Start () {
-		playerMaster.EventNoAmmo -= StopShooting;
-	}
-	
+
 	void FixedUpdate () {
-		if (Time.time > nextShoot) {
+		if (Time.time > nextShoot && GetComponent<Player_Ammunition> ().ammo > 0) {
 			nextShoot = Time.time + shootRate;
 			ShootEm ();
 		}
@@ -30,14 +23,9 @@ public class Player_Shoot : MonoBehaviour {
 
 	private void ShootEm() {
 		//Testing
-		if (canShoot) {
-			playerMaster.GetComponent<Player_Ammunition> ().ammo--;
-			Debug.Log ("Pat");
-		}
-	}
-
-	private void StopShooting() {
-		canShoot = false;
+		Instantiate(laserBolt, shootingPosition.position, Quaternion.LookRotation(Vector3.up));
+		GetComponent<Player_Ammunition> ().ammo--;
+		Debug.Log ("Pat");
 	}
 	
 	private void InitializeReferences() {

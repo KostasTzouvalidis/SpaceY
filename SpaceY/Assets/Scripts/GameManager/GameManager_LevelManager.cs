@@ -15,14 +15,6 @@ public class GameManager_LevelManager : MonoBehaviour {
 	void OnDisable() {
 		playerMaster.EventInput -= EnableEmission;
 	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
 
 	private void EnableEmission() {
 		StartCoroutine (EmitAfterSeconds());

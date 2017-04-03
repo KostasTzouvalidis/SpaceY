@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hazard_Ammo : MonoBehaviour {
 
 	private Player_Master playerMaster;
-	private readonly int AMMO_AMOUNT = 10;
+	private readonly int AMMO_AMOUNT = 20;
 
 	void OnEnable() {
 		InitializeReferences ();
@@ -26,7 +26,6 @@ public class Hazard_Ammo : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if (col.gameObject.name == "Spacecraft") {
 			playerMaster.CallEventPickUpAmmo (AMMO_AMOUNT);
-			Debug.Log ("!");
 		}
 	}
 	

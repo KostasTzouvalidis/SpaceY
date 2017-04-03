@@ -3004,6 +3004,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24940857db4e9ae4194a8ab18fb2c634, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &719472036
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971955617028236, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &773519496
 GameObject:
   m_ObjectHideFlags: 0
@@ -8928,6 +8970,35 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
+--- !u!1 &1470896059 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1276585735734556, guid: c8cc49a753f31a74585afb0f38d9bdbf,
+    type: 2}
+  m_PrefabInternal: {fileID: 719472036}
+--- !u!114 &1470896060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470896059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a88c780a6143142b57e66e69b337ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minZToDestroy: 15
+--- !u!114 &1470896061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470896059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b63d4430b1f321428b2b7d77d63d197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!1001 &1509492975
 Prefab:
   m_ObjectHideFlags: 0
@@ -9184,6 +9255,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114651727161291186, guid: f5b03aa9c7180a141a07605e616a52db,
+        type: 2}
+      propertyPath: laserBolt
+      value: 
+      objectReference: {fileID: 1470896059}
     - target: {fileID: 1338712982621154, guid: f5b03aa9c7180a141a07605e616a52db, type: 2}
       propertyPath: m_Name
       value: Spacecraft

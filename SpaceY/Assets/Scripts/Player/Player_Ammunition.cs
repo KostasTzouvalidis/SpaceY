@@ -27,12 +27,11 @@ public class Player_Ammunition : MonoBehaviour {
 
 	private void PickUpAmmo(int amount) {
 		ammo += amount;
-		playerMaster.GetComponent<Player_Shoot> ().canShoot = true;
 	}
 
 	private void CheckForAmmo() {
 		if (ammo <= 0) {
-			Debug.Log ("!");
+			Debug.Log ("No ammo, but...");
 			playerMaster.CallEventNoAmmo ();
 		}
 	}
