@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4490540819121418}
-  - component: {fileID: 136365218588018660}
+  - component: {fileID: 65486118842341612}
   - component: {fileID: 114083114720446092}
   m_Layer: 9
   m_Name: BulletsTrigger
@@ -147,6 +147,18 @@ MeshCollider:
   m_InflateMesh: 1
   m_SkinWidth: 1.00000005e-20
   m_Mesh: {fileID: 4300000, guid: 03ea9cf99f18eef4bb3ab3ad75ec591f, type: 3}
+--- !u!65 &65486118842341612
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259454466286792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 0.9}
+  m_Center: {x: 0, y: 0, z: -0.1}
 --- !u!95 &95723208150874516
 Animator:
   serializedVersion: 3
@@ -237,16 +249,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyParticleEffect: {fileID: 0}
---- !u!136 &136365218588018660
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1259454466286792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 3
-  m_Direction: 0
-  m_Center: {x: 0, y: 0, z: 0}

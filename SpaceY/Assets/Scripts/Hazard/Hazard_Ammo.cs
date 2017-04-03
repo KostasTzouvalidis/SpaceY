@@ -5,22 +5,10 @@ using UnityEngine;
 public class Hazard_Ammo : MonoBehaviour {
 
 	private Player_Master playerMaster;
-	private readonly int AMMO_AMOUNT = 20;
+	private readonly int AMMO_AMOUNT = 30;
 
-	void OnEnable() {
+	void Start() {
 		InitializeReferences ();
-	}
-	
-	void OnDisable() {
-		
-	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
 	}
 
 	void OnTriggerEnter(Collider col) {

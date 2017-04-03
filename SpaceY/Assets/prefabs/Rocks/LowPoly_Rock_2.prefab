@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114825166807022626}
   - component: {fileID: 114916458180488264}
   - component: {fileID: 114755549994055866}
+  - component: {fileID: 114831972040653416}
   m_Layer: 8
   m_Name: LowPoly_Rock_2
   m_TagString: Untagged
@@ -172,6 +173,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 12
   maxSpeed: 16
+--- !u!114 &114831972040653416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344123113176482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2c56aa401c5ae45a22e288667a53f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114905631288769984
 MonoBehaviour:
   m_ObjectHideFlags: 1

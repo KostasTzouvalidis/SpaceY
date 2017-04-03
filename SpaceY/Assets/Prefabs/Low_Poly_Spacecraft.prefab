@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8410b94c1beb5cb4792c3055081a069d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserBolt: {fileID: 0}
+  laserBolt: {fileID: 1276585735734556, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
   shootingPosition: {fileID: 4889079210745278}
   shootRate: 0.2
 --- !u!114 &114662160798091616
