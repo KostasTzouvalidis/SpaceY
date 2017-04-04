@@ -40,12 +40,12 @@ GameObject:
   - component: {fileID: 23827960394322380}
   - component: {fileID: 95723208150874516}
   - component: {fileID: 54993669798409244}
-  - component: {fileID: 64923796007566796}
   - component: {fileID: 114754785636837492}
   - component: {fileID: 114453151675423046}
   - component: {fileID: 114599406913008182}
   - component: {fileID: 114870344188584386}
   - component: {fileID: 114860066633234014}
+  - component: {fileID: 136629086228999606}
   m_Layer: 8
   m_Name: LowPolyRock_Special
   m_TagString: Untagged
@@ -133,20 +133,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 52
   m_CollisionDetection: 0
---- !u!64 &64923796007566796
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1435350147005470}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 1
-  m_SkinWidth: 1.00000005e-20
-  m_Mesh: {fileID: 4300000, guid: 03ea9cf99f18eef4bb3ab3ad75ec591f, type: 3}
 --- !u!65 &65486118842341612
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -157,8 +143,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 0.9}
-  m_Center: {x: 0, y: 0, z: -0.1}
+  m_Size: {x: 2, y: 2, z: 1.7}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95723208150874516
 Animator:
   serializedVersion: 3
@@ -249,3 +235,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyParticleEffect: {fileID: 0}
+--- !u!136 &136629086228999606
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435350147005470}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.45
+  m_Height: 1.2
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
