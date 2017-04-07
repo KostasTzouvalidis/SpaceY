@@ -3064,6 +3064,11 @@ Prefab:
       propertyPath: healthPanel
       value: 
       objectReference: {fileID: 1389373815}
+    - target: {fileID: 114698072295014984, guid: f5b03aa9c7180a141a07605e616a52db,
+        type: 2}
+      propertyPath: ammoPanel
+      value: 
+      objectReference: {fileID: 509652171}
     - target: {fileID: 1338712982621154, guid: f5b03aa9c7180a141a07605e616a52db, type: 2}
       propertyPath: m_Name
       value: Spacecraft

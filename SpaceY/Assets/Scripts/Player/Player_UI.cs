@@ -50,7 +50,11 @@ public class Player_UI : MonoBehaviour {
 	}
 
 	private void UpdateAmmoUI() {
-		ammoText.text = playerAmmo.ammo.ToString ();
+		int ammo = playerAmmo.ammo;
+		if (ammo != 0)
+			ammoText.text = ammo.ToString ();
+		else
+			ammoText.text = "";
 	}
 
 	private List<T> GetChildrenWithoutParent<T>(T[] com) {

@@ -29,7 +29,6 @@ public class Player_Health : MonoBehaviour {
 		health--;
 		if (health <= 0)
 			playerMaster.CallEventDie ();
-		Debug.Log ("WHAT");
 	}
 	
 	private void InitializeReferences() {
