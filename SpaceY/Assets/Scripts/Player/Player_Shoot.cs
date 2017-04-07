@@ -25,7 +25,6 @@ public class Player_Shoot : MonoBehaviour {
 		//Testing
 		Instantiate(laserBolt, shootingPosition.position, Quaternion.LookRotation(Vector3.up));
 		GetComponent<Player_Ammunition> ().ammo--;
-		Debug.Log ("Pat");
 	}
 	
 	private void InitializeReferences() {

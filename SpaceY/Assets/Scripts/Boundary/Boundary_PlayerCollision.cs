@@ -17,10 +17,10 @@ public class Boundary_PlayerCollision : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionStay (Collision col) {
+	/*void OnCollisionStay (Collision col) {
 		if (col.gameObject.name == "Spacecraft" && !playerMaster.isInvulnerable)
 			playerMaster.CallEventTakeDamage ();
-	}
+	}*/
 
 	private void RepulsePlayer() {
 		Rigidbody playerRig = playerGO.GetComponent<Rigidbody> ();

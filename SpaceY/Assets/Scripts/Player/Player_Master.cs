@@ -8,11 +8,12 @@ public class Player_Master : MonoBehaviour {
 	public delegate void OneParameterEventHandler(int val);
 	public event GeneralEventHandler EventInput;
 	public event GeneralEventHandler EventTakeDamage;
+	public event GeneralEventHandler EventIncreaseHealth;
 	public event GeneralEventHandler EventDie;
 	public event GeneralEventHandler EventNoAmmo;
 	public event OneParameterEventHandler EventPickUpAmmo;
 
-	public int health = 3;
+	//public int health = 3;
 	[SerializeField]
 	public bool isInvulnerable = false;
 
@@ -24,6 +25,12 @@ public class Player_Master : MonoBehaviour {
 	public void CallEventTakeDamage() {
 		if (EventTakeDamage != null)
 			EventTakeDamage ();
+	}
+
+	public void CallEventIncreaseHealth() {
+		if (EventIncreaseHealth != null) {
+			EventIncreaseHealth ();
+		}
 	}
 
 	public void CallEventDie() {

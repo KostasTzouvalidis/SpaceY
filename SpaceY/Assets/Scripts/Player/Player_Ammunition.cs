@@ -31,7 +31,6 @@ public class Player_Ammunition : MonoBehaviour {
 
 	private void CheckForAmmo() {
 		if (ammo <= 0) {
-			Debug.Log ("No ammo, but...");
 			playerMaster.CallEventNoAmmo ();
 		}
 	}

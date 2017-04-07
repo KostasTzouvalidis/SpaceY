@@ -63,6 +63,8 @@ GameObject:
   - component: {fileID: 114908064476199704}
   - component: {fileID: 114662160798091616}
   - component: {fileID: 114651727161291186}
+  - component: {fileID: 114698072295014984}
+  - component: {fileID: 114832901329642260}
   m_Layer: 10
   m_Name: Low_Poly_Spacecraft
   m_TagString: Player
@@ -349,7 +351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338712982621154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0094cefe4fa74d64eb7d0893579ea328, type: 3}
+  m_Script: {fileID: 11500000, guid: db52a141695bae644b69e2a098625887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   invulnerabilityDuration: 1
@@ -379,6 +381,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammo: 0
+--- !u!114 &114698072295014984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338712982621154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e1d1890ef495424d863260811bf60e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthCanvas: {fileID: 0}
+  AmmoCanvas: {fileID: 0}
 --- !u!114 &114718287023474526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -390,8 +405,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 685f5da6dc5d35746bd12dd8fa3d0098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
   isInvulnerable: 0
+--- !u!114 &114832901329642260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338712982621154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50a6176fed8307e4db60517ca9b508a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!114 &114906451769945358
 MonoBehaviour:
   m_ObjectHideFlags: 1
