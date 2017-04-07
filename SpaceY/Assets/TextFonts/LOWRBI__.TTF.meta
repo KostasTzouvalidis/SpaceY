@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 46c5dfdeda7794c4e9252ce5c3742881
-timeCreated: 1491572104
+guid: 8a1cc7825a506a54e91faca01eb54a0d
+timeCreated: 1491573645
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,10 +9,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Prisma
+  fontName: LowRider BB
   fontNames:
-  - Prisma
-  fallbackFontReferences: []
+  - LowRider BB
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3ae2f406368126a46ac227a811cb58e5, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

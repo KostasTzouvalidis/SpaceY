@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager_InitializeUIs : MonoBehaviour {
 
 	private GameManager_Master gmMaster;
-	public GameObject healthCanvas;
+	public GameObject healthPanel;
 	public GameObject heartSprite;
 	public int startingHealth = 3;
 
@@ -15,14 +15,12 @@ public class GameManager_InitializeUIs : MonoBehaviour {
 	}
 
 	private void InitializeHealthCanvas() {
-		Canvas hCanvas = healthCanvas.GetComponent<Canvas> ();
-		Transform panel = hCanvas.transform.GetChild (0);
-		GridLayoutGroup glg = panel.GetComponent<GridLayoutGroup> ();
+		GridLayoutGroup glg = healthPanel.GetComponent<GridLayoutGroup> ();
 		for (int i = 0; i < startingHealth; i++) {
 			GameObject heart = Instantiate (heartSprite);
 			heart.transform.SetParent (glg.transform);
 		}
-		Debug.Log (panel.name);
+		Debug.Log (healthPanel.name);
 	}
 
 	private void InitializeReferences() {

@@ -11,6 +11,7 @@ public class Player_Shoot : MonoBehaviour {
 	public float shootRate = 0.25f;
 
 	void OnEnable() {
+		InitializeReferences ();
 		playerMaster.EventShoot += ShootEm;
 	}
 
@@ -18,14 +19,10 @@ public class Player_Shoot : MonoBehaviour {
 		playerMaster.EventShoot -= ShootEm;
 	}
 
-	void Start() {
-		InitializeReferences ();
-	}
-
 	void FixedUpdate () {
 		if (Time.time > nextShoot && GetComponent<Player_Ammunition> ().ammo > 0) {
 			nextShoot = Time.time + shootRate;
-			ShootEm ();
+			playerMaster.CallEventShoot ();
 		}
 	}
 

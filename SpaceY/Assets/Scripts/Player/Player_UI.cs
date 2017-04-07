@@ -6,18 +6,22 @@ using UnityEngine;
 public class Player_UI : MonoBehaviour {
 
 	private Player_Master playerMaster;
-	public GameObject healthCanvas;
-	public GameObject AmmoCanvas;
+	private Player_Ammunition playerAmmo;
+	public GameObject healthPanel;
+	public GameObject ammoPanel;
 	//Misc
 	private List<Image> imageComponents;
+	private Text ammoText;
 
 	void OnEnable() {
 		InitializeReferences ();
 		playerMaster.EventTakeDamage += ReduceHealthUI;
+		playerMaster.EventShoot += UpdateAmmoUI;
 	}
 	
 	void OnDisable() {
 		playerMaster.EventTakeDamage -= ReduceHealthUI;
+		playerMaster.EventShoot -= UpdateAmmoUI;
 	}
 	
 	void Start () {
@@ -46,7 +50,7 @@ public class Player_UI : MonoBehaviour {
 	}
 
 	private void UpdateAmmoUI() {
-
+		ammoText.text = playerAmmo.ammo.ToString ();
 	}
 
 	private List<T> GetChildrenWithoutParent<T>(T[] com) {
@@ -58,13 +62,14 @@ public class Player_UI : MonoBehaviour {
 	}
 
 	private void InitializeImageComponents() {
-		Canvas hCanvas = healthCanvas.GetComponent<Canvas> ();
 		//Gets the child = Panel GO and then its Image components = UI.Image
-		Image[] images = hCanvas.transform.GetChild (0).GetComponentsInChildren<Image> ();
+		Image[] images = healthPanel.GetComponentsInChildren<Image> ();
 		imageComponents = GetChildrenWithoutParent<Image> (images);
 	}
 
 	private void InitializeReferences() {
 		playerMaster = GetComponent<Player_Master> ();
+		playerAmmo = GetComponent<Player_Ammunition> ();
+		ammoText = ammoPanel.transform.GetChild (0).GetComponent<Text> ();
 	}
 }

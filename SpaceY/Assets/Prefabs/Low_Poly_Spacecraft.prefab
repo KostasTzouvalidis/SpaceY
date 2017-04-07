@@ -392,8 +392,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1d1890ef495424d863260811bf60e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCanvas: {fileID: 0}
-  AmmoCanvas: {fileID: 0}
+  healthPanel: {fileID: 0}
+  ammoPanel: {fileID: 0}
 --- !u!114 &114718287023474526
 MonoBehaviour:
   m_ObjectHideFlags: 1
