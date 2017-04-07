@@ -10,6 +10,14 @@ public class Player_Shoot : MonoBehaviour {
 	public Transform shootingPosition;
 	public float shootRate = 0.25f;
 
+	void OnEnable() {
+		playerMaster.EventShoot += ShootEm;
+	}
+
+	void OnDisable() {
+		playerMaster.EventShoot -= ShootEm;
+	}
+
 	void Start() {
 		InitializeReferences ();
 	}

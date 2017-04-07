@@ -3141,7 +3141,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 718387372}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -3181,7 +3181,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1204951882}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -6467,7 +6467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1389373816
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9642,7 +9642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7a6d1d6b2397f458ec5e53e8ef76f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCanvas: {fileID: 718387372}
+  healthCanvas: {fileID: 1389373815}
   heartSprite: {fileID: 1505416835614354, guid: 9d9da502d8330334fbca8de0a7ba1a59,
     type: 2}
   startingHealth: 5
