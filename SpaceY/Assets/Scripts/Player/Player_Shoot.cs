@@ -28,8 +28,8 @@ public class Player_Shoot : MonoBehaviour {
 
 	private void ShootEm() {
 		//Testing
-		Instantiate(laserBolt, shootingPosition.position, Quaternion.LookRotation(Vector3.up));
 		GetComponent<Player_Ammunition> ().ammo--;
+		Instantiate(laserBolt, shootingPosition.position, Quaternion.LookRotation(Vector3.up));
 	}
 	
 	private void InitializeReferences() {

@@ -20,7 +20,6 @@ public class GameManager_InitializeUIs : MonoBehaviour {
 			GameObject heart = Instantiate (heartSprite);
 			heart.transform.SetParent (glg.transform);
 		}
-		Debug.Log (healthPanel.name);
 	}
 
 	private void InitializeReferences() {
