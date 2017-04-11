@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameManager_InitializeUIs : MonoBehaviour {
 
-	private GameManager_Master gmMaster;
+	//private GameManager_Master gmMaster;
 	public GameObject healthPanel;
 	public GameObject heartSprite;
 	public int startingHealth = 3;
@@ -25,12 +25,11 @@ public class GameManager_InitializeUIs : MonoBehaviour {
 			rt.rotation = defaultRotation;
 			rt.localScale = new Vector3 (1, 1, 1);
 			rt.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
-			Debug.Log (heart.GetComponent<RectTransform> ().localPosition + "?");
 		}
 	}
 
 	private void InitializeReferences() {
-		gmMaster = GetComponent<GameManager_Master> ();
+		//gmMaster = GetComponent<GameManager_Master> ();
 		defaultRotation = new Quaternion (1, 0.0f, 0.0f, 1);
 		InitializeHealthCanvas ();
 	}

@@ -15,6 +15,7 @@ public class Hazard_DestroyByBolt : MonoBehaviour {
 				hazardMaster.CallEventDestroyed ();
 			} catch (System.Exception e) {
 				Debug.Log (this.name + " - " + col.name);
+				Debug.Log ("\t" + e.Message + "!!!");
 				Debug.Break ();
 			}
 		}
