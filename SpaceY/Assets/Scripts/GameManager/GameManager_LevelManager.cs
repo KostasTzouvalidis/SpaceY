@@ -13,11 +13,11 @@ public class GameManager_LevelManager : MonoBehaviour {
 	}
 	
 	void OnDisable() {
-		playerMaster.EventInput -= EnableEmission;
 	}
 
 	private void EnableEmission() {
 		StartCoroutine (EmitAfterSeconds());
+		playerMaster.EventInput -= EnableEmission;
 	}
 
 	private IEnumerator EmitAfterSeconds() {
