@@ -10,8 +10,14 @@ public class Hazard_DestroyByBolt : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.layer == 12)
-			hazardMaster.CallEventDestroyed ();
+		if (col.gameObject.layer == 12) {
+			try {
+				hazardMaster.CallEventDestroyed ();
+			} catch (System.Exception e) {
+				Debug.Log (this.name + " - " + col.name);
+				Debug.Break ();
+			}
+		}
 	}
 	
 	private void InitializeReferences() {

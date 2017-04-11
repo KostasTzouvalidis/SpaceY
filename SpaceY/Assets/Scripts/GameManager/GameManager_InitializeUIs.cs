@@ -20,10 +20,12 @@ public class GameManager_InitializeUIs : MonoBehaviour {
 		GridLayoutGroup glg = healthPanel.GetComponent<GridLayoutGroup> ();
 		for (int i = 0; i < startingHealth; i++) {
 			GameObject heart = Instantiate (heartSprite);
-			heart.transform.SetParent (glg.transform);
-			heart.GetComponent<RectTransform> ().rotation = defaultRotation;
-			heart.GetComponent<RectTransform> ().localScale = new Vector3 (1, 1, 1);
-			Debug.Log (heart.GetComponent<RectTransform> ().rotation + "?");
+			RectTransform rt = heart.GetComponent<RectTransform> ();
+			heart.transform.SetParent (glg.transform, false);
+			rt.rotation = defaultRotation;
+			rt.localScale = new Vector3 (1, 1, 1);
+			rt.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+			Debug.Log (heart.GetComponent<RectTransform> ().localPosition + "?");
 		}
 	}
 
