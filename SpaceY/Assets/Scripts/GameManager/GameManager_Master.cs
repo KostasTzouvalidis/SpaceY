@@ -4,25 +4,15 @@ using UnityEngine;
 
 public class GameManager_Master : MonoBehaviour {
 
-	public static bool shouldEmit = false;
+	public delegate void GeneralEventHandler();
+	public event GeneralEventHandler EventGameMenu;
 
-	void OnEnable() {
-		
-	}
-	
-	void OnDisable() {
-		
-	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
-	
-	private void InitializeReferences() {
-		
+	public static bool shouldEmit = false;
+	public bool isGameMenuOn = false;
+	public bool isGameOver = false;
+
+	public void CallEventGameMenu() {
+		if (EventGameMenu != null)
+			EventGameMenu ();
 	}
 }

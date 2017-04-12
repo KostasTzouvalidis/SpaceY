@@ -6632,7 +6632,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -660}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311691647
@@ -9780,10 +9780,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1838896394}
+  - component: {fileID: 1838896399}
   - component: {fileID: 1838896395}
   - component: {fileID: 1838896396}
   - component: {fileID: 1838896397}
   - component: {fileID: 1838896398}
+  - component: {fileID: 1838896400}
+  - component: {fileID: 1838896401}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: GM
@@ -9837,7 +9840,7 @@ MonoBehaviour:
   fixedZPosition: 14
   burstRate: 0.15
   specialHazardDelay: 15
-  specialHazardRate: 0.08
+  specialHazardRate: 0.07
 --- !u!114 &1838896397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9863,7 +9866,44 @@ MonoBehaviour:
   healthPanel: {fileID: 1389373815}
   heartSprite: {fileID: 1505416835614354, guid: 9d9da502d8330334fbca8de0a7ba1a59,
     type: 2}
+  gameMenuCanvas: {fileID: 1987591308}
   startingHealth: 5
+--- !u!114 &1838896399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838896393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289de79068f15eb4b9c4208836af1745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGameMenuOn: 0
+  isGameOver: 0
+--- !u!114 &1838896400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838896393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872781288da0baf4f9758bcbd545c330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameMenu: {fileID: 1987591308}
+--- !u!114 &1838896401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838896393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 339c05c1df39c4b4fa56ab73aa8d1178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987591308
 GameObject:
   m_ObjectHideFlags: 0
@@ -9881,7 +9921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1987591309
 RectTransform:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 		}
 		else if (probability < burstRate) {
 			HazardBurst ();
-			nextEm += nextEm * 0.02f;
+			nextEm += nextEm * 0.016f;
 		}
 		else
 			HazardEmission ();
