@@ -2928,7 +2928,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 29}
+  - {x: 0, y: 0, z: 30}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.5
@@ -3059,6 +3059,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1338712982621154, guid: f5b03aa9c7180a141a07605e616a52db, type: 2}
+      propertyPath: m_Name
+      value: Spacecraft
+      objectReference: {fileID: 0}
     - target: {fileID: 114698072295014984, guid: f5b03aa9c7180a141a07605e616a52db,
         type: 2}
       propertyPath: healthPanel
@@ -3069,10 +3073,6 @@ Prefab:
       propertyPath: ammoPanel
       value: 
       objectReference: {fileID: 686254871}
-    - target: {fileID: 1338712982621154, guid: f5b03aa9c7180a141a07605e616a52db, type: 2}
-      propertyPath: m_Name
-      value: Spacecraft
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5b03aa9c7180a141a07605e616a52db, type: 2}
   m_IsPrefabParent: 0
@@ -3328,7 +3328,7 @@ Canvas:
   m_GameObject: {fileID: 718387372}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1204951882}
   m_PlaneDistance: 1
   m_PixelPerfect: 1
@@ -3435,7 +3435,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1655963700
+  randomSeed: 252513836
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6094,7 +6094,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4302391828780788, guid: bd0e2d6daeac18d4ea0fb635a9401543, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 23.92
+      value: 41.99
       objectReference: {fileID: 0}
     - target: {fileID: 4302391828780788, guid: bd0e2d6daeac18d4ea0fb635a9401543, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6522,7 +6522,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 29}
+  - {x: 0, y: 0, z: 30}
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.5
@@ -6630,10 +6630,10 @@ RectTransform:
   m_Father: {fileID: 1987591309}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1311691647
 MonoBehaviour:
@@ -6701,8 +6701,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 275, y: -50}
-  m_SizeDelta: {x: 475, y: 75}
+  m_AnchoredPosition: {x: 225, y: -50}
+  m_SizeDelta: {x: 360, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389373817
 MonoBehaviour:
@@ -6756,8 +6756,8 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 75, y: 75}
-  m_Spacing: {x: 25, y: 0}
+  m_CellSize: {x: 60, y: 60}
+  m_Spacing: {x: 15, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 5
 --- !u!1 &1469145804
@@ -9946,7 +9946,7 @@ Canvas:
   m_GameObject: {fileID: 1987591308}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1204951882}
   m_PlaneDistance: 1
   m_PixelPerfect: 0

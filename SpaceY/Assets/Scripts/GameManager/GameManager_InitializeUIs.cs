@@ -20,17 +20,17 @@ public class GameManager_InitializeUIs : MonoBehaviour {
 		GridLayoutGroup glg = healthPanel.GetComponent<GridLayoutGroup> ();
 		for (int i = 0; i < startingHealth; i++) {
 			GameObject heart = Instantiate (heartSprite);
-			RectTransform rt = heart.GetComponent<RectTransform> ();
+			//RectTransform rt = heart.GetComponent<RectTransform> ();
 			heart.transform.SetParent (glg.transform, false);
-			rt.rotation = defaultRotation;
+			/*rt.rotation = defaultRotation;
 			rt.localScale = new Vector3 (1, 1, 1);
-			rt.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+			rt.localPosition = new Vector3(0.0f, 0.0f, 0.0f);*/
 		}
 	}
 
 	private void InitializeReferences() {
 		//gmMaster = GetComponent<GameManager_Master> ();
-		defaultRotation = new Quaternion (1, 0.0f, 0.0f, 1);
+		//defaultRotation = new Quaternion (1, 0.0f, 0.0f, 1);
 		InitializeHealthCanvas ();
 	}
 }

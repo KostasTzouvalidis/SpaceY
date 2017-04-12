@@ -143,7 +143,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.35, y: 2.35, z: 1.7}
+  m_Size: {x: 2.8, y: 2.8, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95723208150874516
 Animator:
@@ -222,7 +222,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a88c780a6143142b57e66e69b337ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minZToDestroy: -15
+  zToDestroy: -15
+  upwardDirection: 0
 --- !u!114 &114870344188584386
 MonoBehaviour:
   m_ObjectHideFlags: 1

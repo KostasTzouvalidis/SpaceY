@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hazard_DestroyByBolt : MonoBehaviour {
 	private Hazard_Master hazardMaster;
 	
-	void Start () {
+	void Awake () {
 		InitializeReferences ();
 	}
 

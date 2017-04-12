@@ -48,7 +48,7 @@ public class Player_UI : MonoBehaviour {
 	}
 
 	private void UpdateAmmoUI() {
-		int ammo = playerAmmo.ammo;
+		int ammo = playerAmmo.ammo - 1;
 		if (ammo != 0)
 			ammoText.text = ammo.ToString ();
 		else
