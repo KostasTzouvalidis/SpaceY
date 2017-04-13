@@ -32,10 +32,15 @@ public class GameManager_GameMenu : MonoBehaviour {
 	}
 
 	private void GetBackToGame() {
-		if (Input.GetMouseButtonDown (0) && gmMaster.isGameMenuOn) {
+		if (Input.GetMouseButtonDown (0) && gmMaster.isGameMenuOn &&
+			!RectTransformUtility.RectangleContainsScreenPoint(
+				gameMenu.transform.GetChild(0).GetComponent<RectTransform>(),
+				Input.mousePosition)) {
 			gmMaster.CallEventGameMenu ();
+			Debug.Log (Input.mousePosition);
 			gmMaster.EventGameMenu -= GetBackToGame;
 		}
+		Debug.Log (gameMenu.transform.GetChild (0).name);
 	}
 
 	private void ToggleMenu() {
