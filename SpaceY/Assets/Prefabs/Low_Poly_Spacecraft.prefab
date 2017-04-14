@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0840814a60618142bf2283d77c2f41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staticCanvas: {fileID: 0}
 --- !u!114 &114500233424133288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db52a141695bae644b69e2a098625887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invulnerabilityDuration: 1
+  invulnerabilityDuration: 1.5
 --- !u!114 &114651727161291186
 MonoBehaviour:
   m_ObjectHideFlags: 1

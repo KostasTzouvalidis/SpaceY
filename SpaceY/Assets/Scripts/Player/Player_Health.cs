@@ -33,7 +33,7 @@ public class Player_Health : MonoBehaviour {
 	
 	private void InitializeReferences() {
 		playerMaster = GetComponent<Player_Master> ();
-		maxhealth = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager_InitializeUIs> ().startingHealth;
+		maxhealth = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager_UIMaster> ().startingHealth;
 		health = maxhealth;
 	}
 }

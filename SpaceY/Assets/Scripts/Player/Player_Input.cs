@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_Input : MonoBehaviour {
 	private Player_Master playerMaster;
-	//TODO - GameManager_Master reference.
+	public GameObject staticCanvas;
 
 	void Start () {
 		InitializeReferences ();		
@@ -15,7 +15,10 @@ public class Player_Input : MonoBehaviour {
 	}
 
 	private void CheckIfCanMove() {
-		if(Input.GetMouseButtonDown(0))
+		if(Input.GetMouseButtonDown(0) &&
+			!RectTransformUtility.RectangleContainsScreenPoint(
+				staticCanvas.transform.GetChild(0).GetComponent<RectTransform>(),
+				Input.mousePosition))
 			playerMaster.CallEventInput ();
 	}
 	

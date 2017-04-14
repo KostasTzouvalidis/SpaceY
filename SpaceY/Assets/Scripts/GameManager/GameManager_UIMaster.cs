@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class GameManager_InitializeUIs : MonoBehaviour {
+public class GameManager_UIMaster : MonoBehaviour {
 
 	private GameManager_Master gmMaster;
 	public GameObject healthPanel;

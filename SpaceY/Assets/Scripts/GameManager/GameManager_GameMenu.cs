@@ -37,7 +37,6 @@ public class GameManager_GameMenu : MonoBehaviour {
 				gameMenu.transform.GetChild(0).GetComponent<RectTransform>(),
 				Input.mousePosition)) {
 			gmMaster.CallEventGameMenu ();
-			Debug.Log (Input.mousePosition);
 			gmMaster.EventGameMenu -= GetBackToGame;
 		}
 		Debug.Log (gameMenu.transform.GetChild (0).name);
@@ -49,6 +48,10 @@ public class GameManager_GameMenu : MonoBehaviour {
 		gameMenu.SetActive(!gameMenu.activeSelf);
 		gmMaster.isGameMenuOn = !gmMaster.isGameMenuOn;
 		//}
+	}
+
+	public void UIResume() {
+		gmMaster.CallEventGameMenu ();
 	}
 	
 	private void InitializeReferences() {
