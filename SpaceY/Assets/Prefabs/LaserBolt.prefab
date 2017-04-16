@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 136222137276575938}
   - component: {fileID: 114848786357463674}
   - component: {fileID: 114140743220328576}
+  - component: {fileID: 114855835264689174}
   m_Layer: 12
   m_Name: LaserBolt
   m_TagString: Untagged
@@ -123,6 +124,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!114 &114855835264689174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1276585735734556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d44942211adc4747ad7eef3b864c5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136222137276575938
 CapsuleCollider:
   m_ObjectHideFlags: 1

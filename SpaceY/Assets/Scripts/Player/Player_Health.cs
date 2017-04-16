@@ -16,14 +16,6 @@ public class Player_Health : MonoBehaviour {
 	void OnDisable() {
 		playerMaster.EventTakeDamage -= ReduceHealth;
 	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
-	}
 
 	private void ReduceHealth() {
 		health--;
