@@ -22,11 +22,7 @@ public class PanelBG_Animation : MonoBehaviour {
 		fadeInAnimation.GetComponent<Image> ().color = new Color();
 		Debug.Log ("Disabled");
 	}
-	
-	void Start () {
-		
-	}
-	
+
 	private void PlayFadeInAnimation() {
 		
 			

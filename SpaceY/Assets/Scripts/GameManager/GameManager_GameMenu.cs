@@ -52,6 +52,10 @@ public class GameManager_GameMenu : MonoBehaviour {
 	public void UIResume() {
 		gmMaster.CallEventGameMenu ();
 	}
+
+	public void UIPause() {
+		gmMaster.CallEventGameMenu ();
+	}
 	
 	private void InitializeReferences() {
 		gmMaster = GetComponent<GameManager_Master> ();
