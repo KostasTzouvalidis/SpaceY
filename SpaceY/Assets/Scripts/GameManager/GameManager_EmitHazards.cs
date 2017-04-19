@@ -32,8 +32,10 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	private void RunHazardEmissionActions() {
 		float probability = Random.Range (0.0f, 1);
 		if (probability < specialHazardRate) {
-			if(Time.time > specialHazardDelay)
+			if (Time.time > specialHazardDelay) {
 				SpecialHazardEmmision ();
+				HazardEmission ();
+			}
 		}
 		else if (probability < burstRate) {
 			HazardBurst ();
