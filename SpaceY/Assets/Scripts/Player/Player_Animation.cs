@@ -17,10 +17,10 @@ public class Player_Animation : MonoBehaviour {
 
 	private void PlayInvulnerableAnimation() {
 		//GetComponent<Animation> ().Play ();
-		this.transform.parent.GetComponent<Animator>().SetTrigger("PlayerInvulnerable");
+		/*this.transform.parent.*/GetComponent<Animator>().SetTrigger("PlayerInvulnerable");
 	}
 	
 	private void InitializeReferences() {
-		playerMaster = GetComponent<Player_Master> ();
+		playerMaster = this.transform.GetChild(0).GetComponent<Player_Master> ();
 	}
 }
