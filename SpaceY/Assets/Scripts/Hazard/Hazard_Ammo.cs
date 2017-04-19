@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hazard_Ammo : MonoBehaviour {
 
 	private Player_Master playerMaster;
-	private readonly int AMMO_AMOUNT = 30;
+	private readonly int AMMO_AMOUNT = 25;
 
 	void Start() {
 		InitializeReferences ();
