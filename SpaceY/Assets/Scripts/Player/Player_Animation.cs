@@ -16,7 +16,8 @@ public class Player_Animation : MonoBehaviour {
 	}
 
 	private void PlayInvulnerableAnimation() {
-		GetComponent<Animation> ().Play ();
+		//GetComponent<Animation> ().Play ();
+		this.transform.parent.GetComponent<Animator>().SetTrigger("PlayerInvulnerable");
 	}
 	
 	private void InitializeReferences() {
