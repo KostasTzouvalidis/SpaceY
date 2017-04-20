@@ -6799,8 +6799,9 @@ GameObject:
   - component: {fileID: 1126089884}
   - component: {fileID: 1126089883}
   - component: {fileID: 1126089882}
+  - component: {fileID: 1126089885}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Button_Pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6910,6 +6911,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1126089880}
+--- !u!111 &1126089885
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1126089880}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 8f107145f75afce45b693cc32ba795bf, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 8f107145f75afce45b693cc32ba795bf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1152917005
 GameObject:
   m_ObjectHideFlags: 0
