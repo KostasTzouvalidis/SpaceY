@@ -6,6 +6,7 @@ public class GameManager_Master : MonoBehaviour {
 
 	public delegate void GeneralEventHandler();
 	public event GeneralEventHandler EventGameMenu;
+	public event GeneralEventHandler EventGiantHazardsPhase;
 
 	public static bool shouldEmit = false;
 	public bool isGameMenuOn = false;
@@ -14,5 +15,10 @@ public class GameManager_Master : MonoBehaviour {
 	public void CallEventGameMenu() {
 		if (EventGameMenu != null)
 			EventGameMenu ();
+	}
+
+	public void CallEventGiantHazardsPhase() {
+		if (EventGiantHazardsPhase != null)
+			EventGiantHazardsPhase ();
 	}
 }

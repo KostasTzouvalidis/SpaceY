@@ -5,12 +5,12 @@ using UnityEngine;
 public class GameManager_EmitHazards : MonoBehaviour {
 
 	//private GameManager_Master gmMaster;
-	[SerializeField]
-	private GameObject[] hazards;
-	[SerializeField]
-	private GameObject specialHazard;
+	[SerializeField] private GameObject[] hazards;
+	[SerializeField] private GameObject specialHazard;
+	[SerializeField] private GameObject giantHazard;
 	private FixedRandom fr;
-	private float nextEm;
+	private float nextEm; // Next Hazard emission
+
 	public float minRate;
 	public float maxRate;
 	public float fixedZPosition;
@@ -19,13 +19,15 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	public float specialHazardRate = 0.05f;
 
 	void Start () {
-		fr = new FixedRandom(-7, 7, 1);
+		InitializeReferences ();
 	}
 	
 	void FixedUpdate () {
-		if (Time.time > nextEm && GameManager_Master.shouldEmit) {
-			nextEm = Time.time + Random.Range (minRate, maxRate);
-			RunHazardEmissionActions ();
+		if (GameManager_Master.shouldEmit) {
+			if (Time.time > nextEm) {
+				nextEm = Time.time + Random.Range (minRate, maxRate);
+				RunHazardEmissionActions ();
+			}
 		}
 	}
 
@@ -33,15 +35,14 @@ public class GameManager_EmitHazards : MonoBehaviour {
 		float probability = Random.Range (0.0f, 1);
 		if (probability < specialHazardRate) {
 			if (Time.time > specialHazardDelay)
-				SpecialHazardEmmision ();
+				SpecialHazardEmission ();
 		}
 		probability = Random.Range (0.0f, 1);
 
 		if (probability < burstRate) {
 			HazardBurst ();
-			nextEm += nextEm * 0.016f;
-		}
-		else
+			nextEm += nextEm * 0.013f;
+		} else
 			HazardEmission ();
 	}
 
@@ -58,12 +59,13 @@ public class GameManager_EmitHazards : MonoBehaviour {
 		}
 	}
 
-	private void SpecialHazardEmmision() {
+	private void SpecialHazardEmission() {
 		float xPos = fr.GetFloatRange();
 		Instantiate (specialHazard, new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
 	}
 
 	private void InitializeReferences() {
 		//gmMaster = GetComponent<GameManager_Master> ();
+		fr = new FixedRandom(-7, 7, 1);
 	}
 }

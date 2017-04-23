@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5
   maxSpeed: 5
+  onlyZAxis: 0
 --- !u!114 &114518499781946302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -182,7 +183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a88c780a6143142b57e66e69b337ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minZToDestroy: -15
+  zToDestroy: -15
+  upwardDirection: 0
 --- !u!114 &114968355820934246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,7 +252,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 387706370
+  randomSeed: -166412171
   InitialModule:
     serializedVersion: 3
     enabled: 1
