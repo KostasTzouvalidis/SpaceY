@@ -52,10 +52,18 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	}
 
 	private void HazardBurst() {
-		float xPos;
-		for (int i = 0; i < (int)Random.Range (2, 3); i++) {
-			xPos = fr.GetFloatRange();
-			Instantiate (hazards [Random.Range (0, hazards.Length)], new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
+		float newXPos, oldXPos = 8; // An invalid value.
+		int i = 0;
+		int numOfHazards = (int)Random.Range (2, 3);
+		while (i < numOfHazards) {
+			newXPos = fr.GetFloatRange();
+			if (newXPos != oldXPos && Mathf.Abs (newXPos - oldXPos) >= 2) {
+				Instantiate (hazards [Random.Range (0, hazards.Length)], new Vector3 (newXPos, 0.0f, fixedZPosition), Quaternion.identity);
+				oldXPos = newXPos;
+				i++;
+			} else {
+				continue;
+			}
 		}
 	}
 

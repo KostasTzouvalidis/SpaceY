@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 114178687427783802}
   - component: {fileID: 114670035989332204}
   - component: {fileID: 114615500469060706}
+  - component: {fileID: 114615540994921038}
   m_Layer: 8
   m_Name: LowPolyRock_Big
   m_TagString: Untagged
@@ -170,6 +171,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zToDestroy: -17
   upwardDirection: 0
+--- !u!114 &114615540994921038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306892148532666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a34b784bef8b6489a39c36c9c5ccdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114670035989332204
 MonoBehaviour:
   m_ObjectHideFlags: 1

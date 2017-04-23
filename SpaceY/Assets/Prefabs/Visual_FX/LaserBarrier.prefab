@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198175764293287314}
   - component: {fileID: 199114602949997512}
   m_Layer: 0
-  m_Name: LaserBarrier1
+  m_Name: LaserBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

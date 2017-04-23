@@ -8,7 +8,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 	private GameManager_EmitHazards emitHazardsComponent;
 	private float nextGEm; // Next Giant Hazard emission.
 	private float nextGEmPhase; // Next Giant hazard emission phase.
-	private float nextGEmPhaseDelay = 10; // Giant hazard emission phase start check offset.
+	private float nextGEmPhaseDelay = 20; // Giant hazard emission phase start check offset.
 	private float GEm_PhaseRate = 25; // Giant hazard emission phase start check rate.
 	private int hazardsNumber;
 
@@ -54,6 +54,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		int i = 0;
 		while(i < hazardsNumber) {
 			float newXPos = FixedRandom.Range (-4, 4, 2);
+			Debug.Log (newXPos);
 			if (newXPos != oldXPos) {
 				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, emitHazardsComponent.fixedZPosition), Quaternion.identity);
 				oldXPos = newXPos;
