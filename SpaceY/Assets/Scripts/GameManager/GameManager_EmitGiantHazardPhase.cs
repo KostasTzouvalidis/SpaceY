@@ -31,13 +31,13 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		
 	}
 	
-	void FixedUpdate () {
-		if (Time.time > nextGEmPhaseDelay) {
+	void Update () {
+		/*if (Time.time > nextGEmPhaseDelay) {
 			if (Time.time > nextGEmPhase) {
 				nextGEmPhase = Time.time + Random.Range (GEm_PhaseRate - 3, GEm_PhaseRate + 3);
 				gmMaster.CallEventGiantHazardsPhase ();
 			}
-		}
+		}*/
 	}
 
 	private void RunGiantHazardEmissionActions() {
@@ -47,14 +47,14 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 	}
 
 	private IEnumerator GiantHazardEmission(float minRate, float maxRate) {
+		GameManager_LevelManager.emitState = EmitState.Giant;
 		emitHazardsComponent.enabled = false;
 		float oldXPos = 5; // Out of valid X range value.
 		yield return new WaitForSeconds (delay);
-		hazardsNumber = Random.Range (4, 6);
+		hazardsNumber = Random.Range (5, 7);
 		int i = 0;
 		while(i < hazardsNumber) {
 			float newXPos = FixedRandom.Range (-4, 4, 2);
-			Debug.Log (newXPos);
 			if (newXPos != oldXPos) {
 				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, emitHazardsComponent.fixedZPosition), Quaternion.identity);
 				oldXPos = newXPos;
@@ -66,6 +66,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		}
 		yield return new WaitForSeconds (1);
 		emitHazardsComponent.enabled = true;
+		GameManager_LevelManager.emitState = EmitState.Regular;
 	}
 	
 	private void InitializeReferences() {

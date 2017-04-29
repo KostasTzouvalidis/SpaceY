@@ -7,7 +7,6 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	//private GameManager_Master gmMaster;
 	[SerializeField] private GameObject[] hazards;
 	[SerializeField] private GameObject specialHazard;
-	[SerializeField] private GameObject giantHazard;
 	private FixedRandom fr;
 	private float nextEm; // Next Hazard emission
 
@@ -17,6 +16,8 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	public float burstRate = 0.2f;
 	public float specialHazardDelay = 15;
 	public float specialHazardRate = 0.05f;
+	private float specialHazardTimer;
+	private readonly float _specialHazardTimerStart = 10;
 
 	void Start () {
 		InitializeReferences ();
@@ -28,6 +29,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 				nextEm = Time.time + Random.Range (minRate, maxRate);
 				RunHazardEmissionActions ();
 			}
+			specialHazardTimer -= Time.deltaTime;
 		}
 	}
 
@@ -37,13 +39,17 @@ public class GameManager_EmitHazards : MonoBehaviour {
 			if (Time.time > specialHazardDelay)
 				SpecialHazardEmission ();
 		}
-		probability = Random.Range (0.0f, 1);
 
+		probability = Random.Range (0.0f, 1);
 		if (probability < burstRate) {
 			HazardBurst ();
-			nextEm += nextEm * 0.013f;
 		} else
 			HazardEmission ();
+
+		//Prevent special hazards from missing for a long time (_specialHazardTimerStart).
+		if (specialHazardTimer <= 0) {
+			SpecialHazardEmission ();
+		}
 	}
 
 	private void HazardEmission() {
@@ -70,10 +76,12 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	private void SpecialHazardEmission() {
 		float xPos = fr.GetFloatRange();
 		Instantiate (specialHazard, new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
+		specialHazardTimer = _specialHazardTimerStart;
 	}
 
 	private void InitializeReferences() {
 		//gmMaster = GetComponent<GameManager_Master> ();
-		fr = new FixedRandom(-7, 7, 1);
+		specialHazardTimer = _specialHazardTimerStart;
+		fr = new FixedRandom(-7, 7, 1.4f);
 	}
 }

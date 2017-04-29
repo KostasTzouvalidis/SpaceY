@@ -10817,7 +10817,6 @@ MonoBehaviour:
   - {fileID: 1344123113176482, guid: fb495bb08c0f06348a9959b66af57d0f, type: 2}
   specialHazard: {fileID: 1435350147005470, guid: 7eb9e2bbdb14ec541abd100bf85655c7,
     type: 2}
-  giantHazard: {fileID: 0}
   minRate: 0.35
   maxRate: 0.6
   fixedZPosition: 14
@@ -10902,8 +10901,8 @@ MonoBehaviour:
     type: 2}
   delay: 1.5
   duration: 5
-  minRate: 0.75
-  maxRate: 1.2
+  minRate: 0.6
+  maxRate: 1.1
 --- !u!1 &1987591308
 GameObject:
   m_ObjectHideFlags: 0
