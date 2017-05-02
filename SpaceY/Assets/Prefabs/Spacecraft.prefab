@@ -69,6 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4118427960799650}
   - component: {fileID: 95905512214131026}
+  - component: {fileID: 114258555305822040}
   m_Layer: 0
   m_Name: Spacecraft
   m_TagString: Untagged
@@ -388,6 +389,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPanel: {fileID: 0}
   ammoPanel: {fileID: 0}
+--- !u!114 &114258555305822040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1058341918074986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4594b05e1b355b2459c48fdc8bd48a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114460019557662628
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -441,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserBolt: {fileID: 1276585735734556, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
   shootingPosition: {fileID: 4124866072457190}
-  shootRate: 0.2
+  shootRate: 0.15
 --- !u!114 &114813375141283104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -472,7 +484,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742165410326046}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4594b05e1b355b2459c48fdc8bd48a0f, type: 3}
   m_Name: 

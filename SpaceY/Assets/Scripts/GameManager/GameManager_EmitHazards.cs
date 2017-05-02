@@ -19,6 +19,10 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	private float specialHazardTimer;
 	private readonly float _specialHazardTimerStart = 10;
 
+	//Debug
+	private float instantiatedXPos;
+
+
 	void Start () {
 		InitializeReferences ();
 	}
@@ -54,6 +58,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 
 	private void HazardEmission() {
 		float xPos = fr.GetFloatRange();
+		instantiatedXPos = xPos;
 		Instantiate (hazards [Random.Range (0, hazards.Length)], new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
 	}
 
@@ -75,7 +80,17 @@ public class GameManager_EmitHazards : MonoBehaviour {
 
 	private void SpecialHazardEmission() {
 		float xPos = fr.GetFloatRange();
-		Instantiate (specialHazard, new Vector3(xPos, 0.0f, fixedZPosition), Quaternion.identity);
+		Vector3 position = new Vector3 (xPos, 0.0f, fixedZPosition);
+		// Prevent from instantiating in the same X position of a random hazard.
+		while (true) {
+			if (xPos != instantiatedXPos) {
+				Instantiate (specialHazard, position, Quaternion.identity);
+				break;
+			} else {
+				xPos = fr.GetFloatRange();
+				position = new Vector3 (xPos, 0.0f, fixedZPosition);
+			}
+		}
 		specialHazardTimer = _specialHazardTimerStart;
 	}
 

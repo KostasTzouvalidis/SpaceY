@@ -10769,6 +10769,7 @@ GameObject:
   - component: {fileID: 1838896400}
   - component: {fileID: 1838896401}
   - component: {fileID: 1838896402}
+  - component: {fileID: 1838896403}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: GM
@@ -10903,6 +10904,17 @@ MonoBehaviour:
   duration: 5
   minRate: 0.6
   maxRate: 1.1
+--- !u!114 &1838896403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838896393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0211579d58ec5e44a8c8b2504fd2432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1987591308
 GameObject:
   m_ObjectHideFlags: 0
