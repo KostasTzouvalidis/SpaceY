@@ -8,36 +8,8 @@ public class GameManager_ComponentManager : MonoBehaviour {
 	private GameManager_Master gmMaster;
 	private Dictionary<string, Component> scriptComponents = new Dictionary<string, Component> ();
 
-	public class NamedComponent {
-		[SerializeField] private string componentName;
-		[SerializeField] private Component component;
-
-		public NamedComponent() {}
-
-		public NamedComponent(string cN, Component c) {
-			componentName = cN;
-			c = component;
-		}
-
-		public string GetComponentName() {return componentName;}
-		public Component GetComponent() {return component;}
-	}
-
 	void OnEnable() {
 		InitializeScriptComponents ();
-		//gmMaster.EventGiantHazardsPhase +=
-	}
-	
-	void OnDisable() {
-		
-	}
-	
-	void Start () {
-		
-	}
-	
-	void Update () {
-		
 	}
 
 	private void InitializeScriptComponents() {
