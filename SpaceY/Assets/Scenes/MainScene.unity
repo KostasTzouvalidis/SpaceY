@@ -2941,7 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.0005578242, b: 0.08088237, a: 0.27450982}
+  m_Color: {r: 0, g: 0.0005578242, b: 0.08088237, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2968,7 +2968,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198659002}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3787083c41dd7844b8bb248742af35a, type: 3}
   m_Name: 
@@ -10910,11 +10910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0211579d58ec5e44a8c8b2504fd2432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptComponents:
-  - componentName: Regular
-    component: {fileID: 1838896396}
-  - componentName: Giant
-    component: {fileID: 1838896402}
 --- !u!1 &1987591308
 GameObject:
   m_ObjectHideFlags: 0

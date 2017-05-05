@@ -27,7 +27,7 @@ public class GameManager_LevelManager : MonoBehaviour {
 	// Giant Hazard variables.
 	private float nextGEm; // Next Giant Hazard emission.
 	private float nextGEmPhase; // Next Giant hazard emission phase.
-	private float nextGEmPhaseDelay = 15; // Giant hazard emission phase start check offset.
+	private float nextGEmPhaseDelay = 20; // Giant hazard emission phase start check offset.
 	private float GEm_PhaseRate = 25; // Giant hazard emission phase start check rate.
 
 	void OnEnable() {

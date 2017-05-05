@@ -453,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserBolt: {fileID: 1276585735734556, guid: c8cc49a753f31a74585afb0f38d9bdbf, type: 2}
   shootingPosition: {fileID: 4124866072457190}
-  shootRate: 0.15
+  shootRate: 0.18
 --- !u!114 &114813375141283104
 MonoBehaviour:
   m_ObjectHideFlags: 1

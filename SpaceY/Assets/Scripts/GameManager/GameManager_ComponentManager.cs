@@ -15,7 +15,7 @@ public class GameManager_ComponentManager : MonoBehaviour {
 	private void InitializeScriptComponents() {
 		Component[] cs = GetComponents (typeof(Component));
 		foreach (Component c in cs) {
-			if (Regex.IsMatch (c.GetType ().ToString (), "_Emit"))
+			if (Regex.IsMatch (c.GetType ().ToString (), "_Emit*"))
 				scriptComponents.Add (c.GetType ().ToString ().Substring(12), c);
 		}
 	}

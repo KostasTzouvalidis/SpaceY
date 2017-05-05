@@ -5,31 +5,32 @@ using UnityEngine.UI;
 
 public class PanelBG_Animation : MonoBehaviour {
 
-	private Animation fadeInAnimation;
-	//private GameManager_Master gmMaster;
+	private GameManager_Master gmMaster;
+	public float fadeInRate = 0.02f;
 
 	void Awake() {
 		InitializeReferences ();
 	}
 
 	void OnEnable() {
-		fadeInAnimation.GetComponent<Image> ().color = new Color(0.5f, 0.4f, 0.0f, 0.5f);
-		fadeInAnimation.Play();
-		Debug.Log ("Enabled");
-	}
-	
-	void OnDisable() {
-		fadeInAnimation.GetComponent<Image> ().color = new Color();
-		Debug.Log ("Disabled");
+		StartCoroutine (PlayFadeInAnimation());
 	}
 
-	private void PlayFadeInAnimation() {
-		
-			
+	void OnDisable() {
+		GetComponent<Image> ().color = new Color (0.0f, 0.0f, 0.0f, 0.0f);
+	}
+
+	private IEnumerator PlayFadeInAnimation() {
+		Color col = GetComponent<Image> ().color;
+		while(col.a < 0.4f) {
+			col.a += fadeInRate;
+			GetComponent<Image> ().color = col;
+			yield return new WaitForEndOfFrame ();
+		}
+		yield return null;
 	}
 	
 	private void InitializeReferences() {
-		fadeInAnimation = GetComponent<Animation> ();
-		//gmMaster = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameManager_Master> ();
+		gmMaster = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameManager_Master> ();
 	}
 }
