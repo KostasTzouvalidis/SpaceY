@@ -49,6 +49,10 @@ public class GameManager_LevelManager : MonoBehaviour {
 		// TODO - Should I use timers?!?
 	}
 
+	private void NextLevel() {
+		
+	}
+
 	private void EnableEmission() {
 		StartCoroutine (EmitAfterSeconds());
 		playerMaster.EventInput -= EnableEmission;

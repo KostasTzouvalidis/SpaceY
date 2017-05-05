@@ -5,16 +5,17 @@ using UnityEngine;
 public class Hazard_Master : MonoBehaviour {
 	
 	public delegate void GeneralEventHandler();
+	public delegate void DamageEventHandler (int health);
 	public event GeneralEventHandler EventDestroyed;
-	public event GeneralEventHandler EventMakeDamage;
+	public event DamageEventHandler EventTakeDamage;
 
 	public void CallEventDestroyed() {
 		if (EventDestroyed != null)
 			EventDestroyed ();
 	}
 
-	public void CallEventMakeDamage() {
-		if (EventMakeDamage != null)
-			EventMakeDamage ();
+	public void CallEventTakeDamage(int health) {
+		if (EventTakeDamage != null)
+			EventTakeDamage (health);
 	}
 }

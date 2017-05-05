@@ -29,7 +29,7 @@ GameObject:
   - component: {fileID: 114566747951625626}
   - component: {fileID: 114728612763264770}
   - component: {fileID: 114144518520494642}
-  - component: {fileID: 114993668891979086}
+  - component: {fileID: 114112185989041050}
   m_Layer: 8
   m_Name: LowPoly_Rock_1
   m_TagString: Untagged
@@ -148,6 +148,18 @@ MonoBehaviour:
   minSpeed: 5
   maxSpeed: 8
   onlyZAxis: 0
+--- !u!114 &114112185989041050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993078863417276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8461c18289111e441943f46eb2d0dbfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &114144518520494642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,16 +208,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f34684e97d72b6e44855a72d932c03e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114993668891979086
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1993078863417276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2c56aa401c5ae45a22e288667a53f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
