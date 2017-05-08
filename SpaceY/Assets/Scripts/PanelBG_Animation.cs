@@ -5,12 +5,7 @@ using UnityEngine.UI;
 
 public class PanelBG_Animation : MonoBehaviour {
 
-	private GameManager_Master gmMaster;
 	public float fadeInRate = 0.02f;
-
-	void Awake() {
-		InitializeReferences ();
-	}
 
 	void OnEnable() {
 		StartCoroutine (PlayFadeInAnimation());
@@ -28,9 +23,5 @@ public class PanelBG_Animation : MonoBehaviour {
 			yield return new WaitForEndOfFrame ();
 		}
 		yield return null;
-	}
-	
-	private void InitializeReferences() {
-		gmMaster = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameManager_Master> ();
 	}
 }

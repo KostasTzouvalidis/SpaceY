@@ -48,7 +48,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 
 	private IEnumerator GiantHazardEmission(float minRate, float maxRate) {
 		GameManager_LevelManager.emitState = EmitState.Giant;
-		emitHazardsComponent.enabled = false;
+		//emitHazardsComponent.enabled = false;
 		float oldXPos = 5; // Out of valid X range value.
 		yield return new WaitForSeconds (delay);
 		hazardsNumber = Random.Range (5, 7);
@@ -65,7 +65,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 			yield return new WaitForSeconds (Random.Range (minRate, maxRate));
 		}
 		yield return new WaitForSeconds (1);
-		emitHazardsComponent.enabled = true;
+		gmMaster.CallEventPhaseChanged ("EmitHazards");
 		GameManager_LevelManager.emitState = EmitState.Regular;
 	}
 	

@@ -6774,11 +6774,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114834463816365210, guid: c78ec30034e43374d89390d0a181f689,
-        type: 2}
-      propertyPath: staticCanvas
-      value: 
-      objectReference: {fileID: 777550899}
     - target: {fileID: 114210241186059288, guid: c78ec30034e43374d89390d0a181f689,
         type: 2}
       propertyPath: healthPanel
@@ -6789,6 +6784,11 @@ Prefab:
       propertyPath: ammoPanel
       value: 
       objectReference: {fileID: 686254871}
+    - target: {fileID: 114834463816365210, guid: c78ec30034e43374d89390d0a181f689,
+        type: 2}
+      propertyPath: staticCanvas
+      value: 
+      objectReference: {fileID: 777550899}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c78ec30034e43374d89390d0a181f689, type: 2}
   m_IsPrefabParent: 0
@@ -10760,11 +10760,11 @@ GameObject:
   - component: {fileID: 1838896399}
   - component: {fileID: 1838896395}
   - component: {fileID: 1838896396}
+  - component: {fileID: 1838896402}
   - component: {fileID: 1838896397}
   - component: {fileID: 1838896398}
   - component: {fileID: 1838896400}
   - component: {fileID: 1838896401}
-  - component: {fileID: 1838896402}
   - component: {fileID: 1838896403}
   m_Layer: 0
   m_Name: _GameManager
