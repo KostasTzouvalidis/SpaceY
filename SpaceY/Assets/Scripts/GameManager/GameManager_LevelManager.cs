@@ -2,18 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EmitState {
-	Regular,
-	Giant,
-	Boss
-};
-
-public enum LevelState {
-	L1,
-	L2,
-	L3
-};
-
 public class GameManager_LevelManager : MonoBehaviour {
 
 	private GameManager_Master gmMaster;

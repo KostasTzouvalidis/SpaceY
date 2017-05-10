@@ -54,7 +54,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		while(i < hazardsNumber) {
 			float newXPos = FixedRandom.Range (-4, 4, 2);
 			if (newXPos != oldXPos) {
-				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, emitHazardsComponent.fixedZPosition), Quaternion.identity);
+				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, emitHazardsComponent.fixedZPosition + 5), Quaternion.identity);
 				oldXPos = newXPos;
 				i++;
 			} else {

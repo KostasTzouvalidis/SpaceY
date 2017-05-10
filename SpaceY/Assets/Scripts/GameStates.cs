@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameStates : MonoBehaviour {
+public enum EmitState {
+	Regular,
+	Giant,
+	Boss
+};
 
-	private void InitializeReferences() {
-		
-	}
-}
+public enum LevelState {
+	L1,
+	L2,
+	L3
+};
