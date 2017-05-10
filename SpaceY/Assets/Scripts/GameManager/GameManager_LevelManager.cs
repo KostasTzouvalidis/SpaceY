@@ -24,15 +24,6 @@ public class GameManager_LevelManager : MonoBehaviour {
 	public static EmitState emitState;
 	public static LevelState levelState;
 
-	// Giant Hazard variables.
-	private float nextGEm; // Next Giant Hazard emission.
-	private float nextGEmPhase; // Next Giant hazard emission phase.
-	private float nextGEmPhaseDelay = 20; // Giant hazard emission phase start check offset.
-	private float GEm_PhaseRate = 25; // Giant hazard emission phase start check rate.
-
-	// Misc
-	private readonly string COMPONENT_TAG = "Emit";
-
 	void OnEnable() {
 		InitializeReferences ();
 		playerMaster.EventInput += EnableEmission;
@@ -40,17 +31,6 @@ public class GameManager_LevelManager : MonoBehaviour {
 	
 	void OnDisable() {
 		
-	}
-
-	void Update() {
-		if (Time.time > nextGEmPhaseDelay) {
-			if (Time.time > nextGEmPhase) {
-				nextGEmPhase = Time.time + Random.Range (GEm_PhaseRate - 3, GEm_PhaseRate + 3);
-				gmMaster.CallEventGiantHazardsPhase ();
-				gmMaster.CallEventPhaseChanged (COMPONENT_TAG + "GiantHazardPhase");
-			}
-		}
-		// TODO - Should I use timers?!?
 	}
 
 	private void NextLevel() {

@@ -9,7 +9,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 	private float nextGEm; // Next Giant Hazard emission.
 	private float nextGEmPhase; // Next Giant hazard emission phase.
 	private float nextGEmPhaseDelay = 20; // Giant hazard emission phase start check offset.
-	private float GEm_PhaseRate = 25; // Giant hazard emission phase start check rate.
+	private float GEm_PhaseRate = 30; // Giant hazard emission phase start check rate.
 	private int hazardsNumber;
 
 	public GameObject giantHazard;
@@ -24,20 +24,18 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 	}
 	
 	void OnDisable() {
+		StopCoroutine("GiantHazardEmission");
 		gmMaster.EventGiantHazardsPhase -= RunGiantHazardEmissionActions;
 	}
-	
-	void Start () {
-		
-	}
-	
+
 	void Update () {
-		/*if (Time.time > nextGEmPhaseDelay) {
+		if (Time.time > nextGEmPhaseDelay) {
 			if (Time.time > nextGEmPhase) {
-				nextGEmPhase = Time.time + Random.Range (GEm_PhaseRate - 3, GEm_PhaseRate + 3);
+				nextGEmPhase = Time.time + Random.Range (GEm_PhaseRate - 3, GEm_PhaseRate + 7);
 				gmMaster.CallEventGiantHazardsPhase ();
+				gmMaster.CallEventPhaseChanged ("EmitGiantHazardPhase");
 			}
-		}*/
+		}
 	}
 
 	private void RunGiantHazardEmissionActions() {

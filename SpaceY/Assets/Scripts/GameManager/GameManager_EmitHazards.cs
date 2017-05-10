@@ -16,7 +16,9 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	public float burstRate = 0.2f;
 	public float specialHazardDelay = 15;
 	public float specialHazardRate = 0.05f;
+	public float specialHazardEmitOffset = 5;
 	private float specialHazardTimer;
+	private float specialHazardEmitOffsetTimer;
 	private readonly float _specialHazardTimerStart = 10;
 
 	//Debug
@@ -27,21 +29,25 @@ public class GameManager_EmitHazards : MonoBehaviour {
 		InitializeReferences ();
 	}
 	
-	void FixedUpdate () {
+	void Update () {
 		if (GameManager_Master.shouldEmit) {
 			if (Time.time > nextEm) {
 				nextEm = Time.time + Random.Range (minRate, maxRate);
 				RunHazardEmissionActions ();
 			}
 			specialHazardTimer -= Time.deltaTime;
+			specialHazardEmitOffsetTimer -= Time.deltaTime;
 		}
 	}
 
 	private void RunHazardEmissionActions() {
-		float probability = Random.Range (0.0f, 1);
-		if (probability < specialHazardRate) {
-			if (Time.time > specialHazardDelay)
-				SpecialHazardEmission ();
+		float probability;
+		if (specialHazardEmitOffsetTimer <= 0) {
+			probability = Random.Range (0.0f, 1);
+			if (probability < specialHazardRate) {
+				if (Time.time > specialHazardDelay)
+					SpecialHazardEmission ();
+			}
 		}
 
 		probability = Random.Range (0.0f, 1);
@@ -91,6 +97,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 				position = new Vector3 (xPos, 0.0f, fixedZPosition);
 			}
 		}
+		specialHazardEmitOffsetTimer = specialHazardEmitOffset;
 		specialHazardTimer = _specialHazardTimerStart;
 	}
 
