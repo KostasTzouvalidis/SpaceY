@@ -14,7 +14,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 
 	public GameObject giantHazard;
 	public float delay = 1.5f;
-	public float duration = 5; // Fixed time of the phase.
+	public int numberOfHazards = 5;
 	public float minRate;
 	public float maxRate;
 
@@ -49,7 +49,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		//emitHazardsComponent.enabled = false;
 		float oldXPos = 5; // Out of valid X range value.
 		yield return new WaitForSeconds (delay);
-		hazardsNumber = Random.Range (5, 7);
+		hazardsNumber = numberOfHazards;
 		int i = 0;
 		while(i < hazardsNumber) {
 			float newXPos = FixedRandom.Range (-4, 4, 2);
@@ -65,6 +65,10 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		yield return new WaitForSeconds (1);
 		gmMaster.CallEventPhaseChanged ("EmitHazards");
 		GameManager_LevelManager.emitState = EmitState.Regular;
+	}
+
+	private void InitializeNextLevelParameters() {
+		
 	}
 	
 	private void InitializeReferences() {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName="Assets/Scripts/_DATA/Levels/Level")]
+[CreateAssetMenu(menuName="Assets/Levels/Level")]
 public class LevelData : ScriptableObject {
 
 	/*

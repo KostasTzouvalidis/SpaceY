@@ -8,6 +8,7 @@ public class GameManager_Master : MonoBehaviour {
 	public delegate void PhaseEventHandler(string index);
 	public event GeneralEventHandler EventGameMenu;
 	public event GeneralEventHandler EventGiantHazardsPhase;
+	public event GeneralEventHandler EventNextLevel;
 	public event PhaseEventHandler EventPhaseChanged;
 
 	public static bool shouldEmit = false;
@@ -22,6 +23,12 @@ public class GameManager_Master : MonoBehaviour {
 	public void CallEventGiantHazardsPhase() {
 		if (EventGiantHazardsPhase != null)
 			EventGiantHazardsPhase ();
+	}
+
+	public void CallEventNextLevel() {
+		if (EventNextLevel != null) {
+			EventNextLevel ();
+		}		
 	}
 
 	public void CallEventPhaseChanged(string toPhaseIndex) {

@@ -10820,6 +10820,7 @@ MonoBehaviour:
   burstRate: 0.15
   specialHazardDelay: 15
   specialHazardRate: 0.07
+  specialHazardEmitOffset: 5
 --- !u!114 &1838896397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10831,6 +10832,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b97fd95633657040a87b513943e0601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelData:
+  - {fileID: 11400000, guid: 023222d95587bc747a7df79715467e5c, type: 2}
+  - {fileID: 11400000, guid: 1ee5bb42467e5d14bb387ece4854284a, type: 2}
 --- !u!114 &1838896398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10897,7 +10901,7 @@ MonoBehaviour:
   giantHazard: {fileID: 1306892148532666, guid: 335ad217f20f5c342b47e73fbc943c62,
     type: 2}
   delay: 1.5
-  duration: 5
+  numberOfHazards: 5
   minRate: 0.6
   maxRate: 1.1
 --- !u!114 &1838896403

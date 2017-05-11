@@ -19,7 +19,7 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	public float specialHazardEmitOffset = 5;
 	private float specialHazardTimer;
 	private float specialHazardEmitOffsetTimer;
-	private readonly float _specialHazardTimerStart = 10;
+	private readonly float _specialHazardTimerStart = 12;
 
 	//Debug
 	private float instantiatedXPos;
