@@ -14,13 +14,16 @@ public class GameManager_LevelManager : MonoBehaviour {
 
 	// Leveling
 	public LevelData[] levelData;
-	public LevelData _levelData;
+	public static LevelData _levelData;
 	public int currentLevel = 1;
 
-	void OnEnable() {
+	void Awake() {
 		InitializeReferences ();
-		playerMaster.EventInput += EnableEmission;
 		gmMaster.EventNextLevel += SwitchToNextLevelData;
+	}
+
+	void OnEnable() {
+		playerMaster.EventInput += EnableEmission;
 	}
 	
 	void OnDisable() {
@@ -39,7 +42,7 @@ public class GameManager_LevelManager : MonoBehaviour {
 
 	private bool NextLevelData() {
 		currentLevel++;
-		if (!(currentLevel > levelData.Length - 1)) {
+		if (!(currentLevel > levelData.Length)) {
 			_levelData = levelData [currentLevel - 1];
 			return true;
 		} else {
@@ -64,8 +67,8 @@ public class GameManager_LevelManager : MonoBehaviour {
 	}
 
 	private void InitializeReferences() {
+		InitializeLevel ();
 		playerMaster = GameObject.Find("Spacecraft").GetComponent<Player_Master>();
 		gmMaster = GetComponent<GameManager_Master> ();
-		InitializeLevel ();
 	}
 }

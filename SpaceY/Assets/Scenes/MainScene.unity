@@ -10835,6 +10835,8 @@ MonoBehaviour:
   levelData:
   - {fileID: 11400000, guid: 023222d95587bc747a7df79715467e5c, type: 2}
   - {fileID: 11400000, guid: 1ee5bb42467e5d14bb387ece4854284a, type: 2}
+  - {fileID: 11400000, guid: 30bf8440c2be4e041b722b104bcd20f2, type: 2}
+  currentLevel: 1
 --- !u!114 &1838896398
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,12 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07813d602b50c9b4bb147912c2f49de9, type: 3}
-  m_Name: Level2
+  m_Name: Level3
   m_EditorClassIdentifier: 
   minRegularEmissionRate: 0.7
-  maxRegularEmissionRate: 1.1
-  burstRate: 0.05
+  maxRegularEmissionRate: 0.9
+  burstRate: 0.07
   specialHazardRate: 0.1
-  giantHazardDuration: 7
   minGiantEmissionRate: 1.2
-  maxGiantEmissionRate: 1.65
+  maxGiantEmissionRate: 1.7

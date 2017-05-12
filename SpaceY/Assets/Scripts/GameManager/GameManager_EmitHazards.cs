@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager_EmitHazards : MonoBehaviour {
 
-	//private GameManager_Master gmMaster;
+	private GameManager_Master gmMaster;
 	[SerializeField] private GameObject[] hazards;
 	[SerializeField] private GameObject specialHazard;
 	private FixedRandom fr;
@@ -24,11 +24,15 @@ public class GameManager_EmitHazards : MonoBehaviour {
 	//Debug
 	private float instantiatedXPos;
 
-
-	void Start () {
+	void OnEnable() {
 		InitializeReferences ();
+		gmMaster.EventNextLevel += InitializeLevelParameters;
 	}
-	
+
+	void OnDisable() {
+		gmMaster.EventNextLevel -= InitializeLevelParameters;
+	}
+
 	void Update () {
 		if (GameManager_Master.shouldEmit) {
 			if (Time.time > nextEm) {
@@ -101,9 +105,17 @@ public class GameManager_EmitHazards : MonoBehaviour {
 		specialHazardTimer = _specialHazardTimerStart;
 	}
 
+	private void InitializeLevelParameters() {
+		minRate = GameManager_LevelManager._levelData.minRegularEmissionRate;
+		maxRate = GameManager_LevelManager._levelData.maxRegularEmissionRate;
+		burstRate = GameManager_LevelManager._levelData.burstRate;
+		specialHazardRate = GameManager_LevelManager._levelData.specialHazardRate;
+	}
+
 	private void InitializeReferences() {
-		//gmMaster = GetComponent<GameManager_Master> ();
+		gmMaster = GetComponent<GameManager_Master> ();
 		specialHazardTimer = _specialHazardTimerStart;
 		fr = new FixedRandom(-7, 7, 1.4f);
+		InitializeLevelParameters();
 	}
 }

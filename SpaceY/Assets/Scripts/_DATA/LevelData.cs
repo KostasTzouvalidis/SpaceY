@@ -12,10 +12,10 @@ public class LevelData : ScriptableObject {
 	// Regular hazard emission parameters
 	public float minRegularEmissionRate;
 	public float maxRegularEmissionRate;
+	public float burstRate;
 	public float specialHazardRate;
 
 	// Giant hazard emission parameters
-	public float giantHazardDuration;
 	public float minGiantEmissionRate;
 	public float maxGiantEmissionRate;
 
