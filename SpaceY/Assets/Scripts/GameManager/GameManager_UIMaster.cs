@@ -9,18 +9,32 @@ public class GameManager_UIMaster : MonoBehaviour {
 	public GameObject healthPanel;
 	public GameObject heartSprite;
 	public GameObject gameMenuCanvas;
+	public GameObject levelBanner;
 	public int startingHealth = 3;
+
+	private readonly string LEVEL_TAG = "Level ";
 
 	void Awake() {
 		InitializeReferences ();
 	}
 
 	void OnEnable() {
-
+		gmMaster.EventNextLevel += NextLevelBanner;
 	}
 
 	void OnDisable() {
+		gmMaster.EventNextLevel -= NextLevelBanner;
+	}
 
+	private void NextLevelBanner() {
+		levelBanner.GetComponentInChildren<Text> ().text = LEVEL_TAG + GameManager_LevelManager._currentLevel;
+		StartCoroutine (showNextLevelBanner());
+	}
+
+	private IEnumerator showNextLevelBanner() {
+		levelBanner.SetActive (true);
+		yield return new WaitForSeconds (1);
+		levelBanner.SetActive (false);
 	}
 
 	private void InitializeHealthPanel() {
@@ -36,9 +50,14 @@ public class GameManager_UIMaster : MonoBehaviour {
 		gmMaster.isGameMenuOn = false;
 	}
 
+	private void InitializeLevelbanner() {
+		levelBanner.SetActive(false);
+	}
+
 	private void InitializeReferences() {
 		gmMaster = GetComponent<GameManager_Master> ();
 		InitializeHealthPanel ();
 		InitializeGameMenuCanvas ();
+		InitializeLevelbanner ();
 	}
 }

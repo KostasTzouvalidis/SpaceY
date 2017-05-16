@@ -15,7 +15,7 @@ public class GameManager_LevelManager : MonoBehaviour {
 	// Leveling
 	public LevelData[] levelData;
 	public static LevelData _levelData;
-	public int currentLevel = 1;
+	public static int _currentLevel = 1;
 
 	void Awake() {
 		InitializeReferences ();
@@ -41,9 +41,9 @@ public class GameManager_LevelManager : MonoBehaviour {
 	}
 
 	private bool NextLevelData() {
-		currentLevel++;
-		if (!(currentLevel > levelData.Length)) {
-			_levelData = levelData [currentLevel - 1];
+		_currentLevel++;
+		if (!(_currentLevel > levelData.Length)) {
+			_levelData = levelData [_currentLevel - 1];
 			return true;
 		} else {
 			return false;
