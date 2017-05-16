@@ -15,6 +15,14 @@ public class GameManager_UIMaster : MonoBehaviour {
 		InitializeReferences ();
 	}
 
+	void OnEnable() {
+
+	}
+
+	void OnDisable() {
+
+	}
+
 	private void InitializeHealthPanel() {
 		GridLayoutGroup glg = healthPanel.GetComponent<GridLayoutGroup> ();
 		for (int i = 0; i < startingHealth; i++) {

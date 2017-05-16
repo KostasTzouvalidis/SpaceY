@@ -15,5 +15,6 @@ MonoBehaviour:
   maxRegularEmissionRate: 0.9
   burstRate: 0.07
   specialHazardRate: 0.1
-  minGiantEmissionRate: 1.2
-  maxGiantEmissionRate: 1.7
+  minGiantEmissionRate: 1.15
+  maxGiantEmissionRate: 1.5
+  numberOfGiantHazards: 4

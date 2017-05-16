@@ -21,11 +21,13 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 	void OnEnable() {
 		InitializeReferences ();
 		gmMaster.EventGiantHazardsPhase += RunGiantHazardEmissionActions;
+		gmMaster.EventNextLevel += InitializeLevelParameters;
 	}
 	
 	void OnDisable() {
 		StopCoroutine("GiantHazardEmission");
 		gmMaster.EventGiantHazardsPhase -= RunGiantHazardEmissionActions;
+		gmMaster.EventNextLevel -= InitializeLevelParameters;
 	}
 
 	void Update () {
@@ -67,12 +69,15 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		GameManager_LevelManager.emitState = EmitState.Regular;
 	}
 
-	private void InitializeNextLevelParameters() {
-		
+	private void InitializeLevelParameters() {
+		minRate = GameManager_LevelManager._levelData.minGiantEmissionRate;
+		maxRate = GameManager_LevelManager._levelData.maxGiantEmissionRate;
+		numberOfHazards = GameManager_LevelManager._levelData.numberOfGiantHazards;
 	}
 	
 	private void InitializeReferences() {
 		gmMaster = GetComponent<GameManager_Master> ();
 		emitHazardsComponent = GetComponent<GameManager_EmitHazards> ();
+		InitializeLevelParameters ();
 	}
 }

@@ -18,6 +18,7 @@ public class LevelData : ScriptableObject {
 	// Giant hazard emission parameters
 	public float minGiantEmissionRate;
 	public float maxGiantEmissionRate;
+	public int numberOfGiantHazards;
 
 	/*
 	 * Level Parameters
