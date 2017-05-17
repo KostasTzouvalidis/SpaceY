@@ -19,6 +19,7 @@ public class LevelData : ScriptableObject {
 	public float minGiantEmissionRate;
 	public float maxGiantEmissionRate;
 	public int numberOfGiantHazards;
+	public bool shouldEmitGiantHazards;
 
 	/*
 	 * Level Parameters
