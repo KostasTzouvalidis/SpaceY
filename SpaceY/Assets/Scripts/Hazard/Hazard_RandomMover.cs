@@ -18,6 +18,6 @@ public class Hazard_RandomMover : MonoBehaviour {
 	}
 
 	void Start() {
-		this.GetComponent<Rigidbody>().velocity = Vector3.back * Random.Range(minSpeed, maxSpeed); 
+		this.GetComponent<Rigidbody>().velocity = Vector3.back * Random.Range(minSpeed, maxSpeed);
 	}
 }
