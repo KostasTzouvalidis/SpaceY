@@ -8,6 +8,7 @@ public class LevelData : ScriptableObject {
 	/*
 	 * Game Manager Parameters
 	 */
+	public HazardsData hazardsParameters;
 
 	// Regular hazard emission parameters
 	public float minRegularEmissionRate;

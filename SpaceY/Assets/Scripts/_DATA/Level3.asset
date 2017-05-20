@@ -15,6 +15,7 @@ MonoBehaviour:
   maxRegularEmissionRate: 1.1
   burstRate: 0.05
   specialHazardRate: 0.1
+  hazardsParameters: {fileID: 11400000, guid: 8213f29c7c424a943856490df5bb2b4e, type: 2}
   minGiantEmissionRate: 1.15
   maxGiantEmissionRate: 1.5
   numberOfGiantHazards: 4

@@ -13,6 +13,7 @@ public class Player_Master : MonoBehaviour {
 	public event GeneralEventHandler EventNoAmmo;
 	public event GeneralEventHandler EventShoot;
 	public event OneParameterEventHandler EventPickUpAmmo;
+	public event OneParameterEventHandler EventPickUpGem;
 
 	public bool isInvulnerable = false;
 	public bool canMove = true;
@@ -51,6 +52,11 @@ public class Player_Master : MonoBehaviour {
 	public void CallEventPickUpAmmo(int value) {
 		if (EventPickUpAmmo != null)
 			EventPickUpAmmo (value);
+	}
+
+	public void CallEventPickUpGem(int number) {
+		if (EventPickUpGem != null)
+			EventPickUpGem (number);
 	}
 
 }
