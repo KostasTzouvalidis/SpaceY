@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 
 	private GameManager_Master gmMaster;
-	private GameManager_EmitHazards emitHazardsComponent;
 	private float nextGEm; // Next Giant Hazard emission.
 	private float nextGEmPhase; // Next Giant hazard emission phase.
 	private float nextGEmPhaseDelay = 20; // Giant hazard emission phase start check offset.
@@ -57,7 +56,7 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		while(i < hazardsNumber) {
 			float newXPos = FixedRandom.Range (-4, 4, 2);
 			if (newXPos != oldXPos) {
-				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, emitHazardsComponent.fixedZPosition + 5), Quaternion.identity);
+				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, GameManager_EmitHazards.fixedZPosition), Quaternion.identity);
 				oldXPos = newXPos;
 				i++;
 			} else {
@@ -79,7 +78,6 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 	
 	private void InitializeReferences() {
 		gmMaster = GetComponent<GameManager_Master> ();
-		emitHazardsComponent = GetComponent<GameManager_EmitHazards> ();
 		InitializeLevelParameters ();
 	}
 }

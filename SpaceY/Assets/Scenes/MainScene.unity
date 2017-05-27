@@ -11031,6 +11031,7 @@ GameObject:
   - component: {fileID: 1838896400}
   - component: {fileID: 1838896401}
   - component: {fileID: 1838896403}
+  - component: {fileID: 1838896404}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: GM
@@ -11081,7 +11082,6 @@ MonoBehaviour:
     type: 2}
   minRate: 0.35
   maxRate: 0.6
-  fixedZPosition: 14
   burstRate: 0.15
   specialHazardDelay: 15
   specialHazardRate: 0.07
@@ -11101,7 +11101,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 023222d95587bc747a7df79715467e5c, type: 2}
   - {fileID: 11400000, guid: 1ee5bb42467e5d14bb387ece4854284a, type: 2}
   - {fileID: 11400000, guid: 30bf8440c2be4e041b722b104bcd20f2, type: 2}
-  currentLevel: 1
 --- !u!114 &1838896398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11183,6 +11182,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0211579d58ec5e44a8c8b2504fd2432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1838896404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1838896393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf8805b32cef8a4b8ea8e1b28e41c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitRate: 0
+  healthRate: 0
+  shieldRate: 0
 --- !u!1 &1987591308
 GameObject:
   m_ObjectHideFlags: 0

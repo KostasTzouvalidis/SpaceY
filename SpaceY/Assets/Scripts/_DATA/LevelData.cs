@@ -22,6 +22,8 @@ public class LevelData : ScriptableObject {
 	public int numberOfGiantHazards;
 	public bool shouldEmitGiantHazards;
 
+	// Helpful emission parameters
+	public float helpfulEmissionRate;
 	/*
 	 * Level Parameters
 	 */

@@ -9,15 +9,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07813d602b50c9b4bb147912c2f49de9, type: 3}
-  m_Name: Level2
+  m_Name: Level4
   m_EditorClassIdentifier: 
-  hazardsParameters: {fileID: 11400000, guid: 93c5d18fab019fc498b15fbf2ff0d7ca, type: 2}
-  minRegularEmissionRate: 0.9
-  maxRegularEmissionRate: 1.25
-  burstRate: 0
+  hazardsParameters: {fileID: 11400000, guid: 8213f29c7c424a943856490df5bb2b4e, type: 2}
+  minRegularEmissionRate: 0.75
+  maxRegularEmissionRate: 1.05
+  burstRate: 0.07
   specialHazardRate: 0.1
-  minGiantEmissionRate: 1.3
-  maxGiantEmissionRate: 1.65
+  minGiantEmissionRate: 1.15
+  maxGiantEmissionRate: 1.35
   numberOfGiantHazards: 4
   shouldEmitGiantHazards: 1
-  helpfulEmissionRate: 5
+  helpfulEmissionRate: 6.5

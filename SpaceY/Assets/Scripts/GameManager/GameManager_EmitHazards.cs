@@ -12,14 +12,14 @@ public class GameManager_EmitHazards : MonoBehaviour {
 
 	public float minRate;
 	public float maxRate;
-	public float fixedZPosition;
+	public static float fixedZPosition = 20;
 	public float burstRate = 0.2f;
 	public float specialHazardDelay = 15;
 	public float specialHazardRate = 0.05f;
-	public float specialHazardEmitOffset = 5;
+	public float specialHazardEmitOffset = 4;
 	private float specialHazardTimer;
 	private float specialHazardEmitOffsetTimer;
-	private readonly float _specialHazardTimerStart = 12;
+	private readonly float _specialHazardTimerStart = 9;
 
 	//Debug
 	private float instantiatedXPos;

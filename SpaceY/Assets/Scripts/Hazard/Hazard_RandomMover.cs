@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Hazard_RandomMover : MonoBehaviour {
 
-	public float minSpeed;
-	public float maxSpeed;
+	private float minSpeed;
+	private float maxSpeed;
 
 	void OnEnable() {
 		if (name.Contains ("_Big")) { // If it is a LowPoly_Rock_1
