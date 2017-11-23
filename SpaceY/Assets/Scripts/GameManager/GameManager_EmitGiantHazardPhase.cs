@@ -51,9 +51,9 @@ public class GameManager_EmitGiantHazardPhase : MonoBehaviour {
 		//emitHazardsComponent.enabled = false;
 		float oldXPos = 5; // Out of valid X range value.
 		yield return new WaitForSeconds (delay);
-		hazardsNumber = numberOfHazards;
+		//hazardsNumber = numberOfHazards;
 		int i = 0;
-		while(i < hazardsNumber) {
+		while(i < numberOfHazards) {
 			float newXPos = FixedRandom.Range (-4, 4, 2);
 			if (newXPos != oldXPos) {
 				Instantiate (giantHazard, new Vector3 (newXPos, 0.0f, GameManager_EmitHazards.fixedZPosition), Quaternion.identity);
